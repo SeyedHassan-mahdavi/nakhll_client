@@ -1,0 +1,20 @@
+// components
+@import './custom/badge.scss';
+@import './custom/breadCrumbs.scss';
+@import './custom/label.scss';
+@import './custom/tab.scss';
+@import './custom/button.scss';
+@import './custom/productSlider.scss';
+@import './custom/header.scss';
+// pages
+@import './pages/dashboard/index.scss';
+@import './pages/dashboard/dashboardCard.scss';
+@import './pages/takhfif.scss';
+@import './pages/products/index.scss';
+@import './style.scss';
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,0 +1,25 @@
+// div wrapper
+.dashboard{
+    display: flex;
+    direction: rtl;
+    font-family: 'vazir';
+    flex-direction: column;
+    align-items: center;
+    // h3
+    .dashboard__h3{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #007aff;
+        color: #fff;
+        margin: 0px;
+    }
+}
+// h1
+.dashboard__h1{
+    width: 100%;
+    font-family: 'vazir';
+    text-align: center;
+}

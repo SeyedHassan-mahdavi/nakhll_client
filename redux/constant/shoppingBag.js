@@ -1,0 +1,1 @@
+export const ADD_IN_BAG = 'ADD_IN_BAG';

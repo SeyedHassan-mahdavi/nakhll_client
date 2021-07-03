@@ -1,0 +1,210 @@
+{
+    "product": [
+        {
+            "id": "f0e2cd5f-39b1-41c4-98b4-41d62b972ba5",
+            "title": "هدفون بلوتوث جی بی ال مدل 450BT",
+            "image": "/media/Pictures/Markets/SubMarkets/Shops/Products/Dm3Y6G.jpg",
+            "description": "",
+            "slug": "jbl-wireless-headphones-model-450bt",
+            "price": 2000000,
+            "available": true,
+            "publish": true,
+            "discount": 2,
+            "related_products": [
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/5Xa1Dk/c7b7a658c64afee1b318119af48510d9.jpg",
+                    "url": "/product/sajadsystem/joyroom-jr-t03s-wireless-headphone/",
+                    "old_price": 3950000,
+                    "price": 3900000,
+                    "slug": "joyroom-jr-t03s-wireless-headphone",
+                    "title": "هدفون بی سیم جوی روم مدل JR-T03S",
+                    "status": "آماده در انبار",
+                    "discount": 1,
+                    "id": "8924f8c3-ace6-45b8-a0ce-d8f61208d5db",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/LvlULt/0097a279400e3d307e419c59b64c3ea3.jpg",
+                    "url": "/product/sajadsystem/denmen-handsfree-model-dr01/",
+                    "old_price": 500000,
+                    "price": 450000,
+                    "slug": "denmen-handsfree-model-dr01",
+                    "title": "هندزفری دنمن مدل DR01",
+                    "status": "آماده در انبار",
+                    "discount": 10,
+                    "id": "06c5fea6-d623-4088-95e6-db6019e6ec4a",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/EGfO3f/90982144d2c77421c87a0f759c0b520a.jpg",
+                    "url": "/product/sajadsystem/mi-bluetooth-neckband-ultra-deep-bass/",
+                    "old_price": 2900000,
+                    "price": 2750000,
+                    "slug": "mi-bluetooth-neckband-ultra-deep-bass",
+                    "title": "هدفون بی سیم شیائومی مدل Mi Bluetooth Neckband غیر اصل",
+                    "status": "آماده در انبار",
+                    "discount": 5,
+                    "id": "a6074a3e-c2ea-4a15-87d2-ba86ebd454d6",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/Dm3Y6G/ec6af522d674af1a83687fc94c85231f.jpg",
+                    "url": "/product/sajadsystem/jbl-wireless-headphones-model-450bt/",
+                    "old_price": 2050000,
+                    "price": 2000000,
+                    "slug": "jbl-wireless-headphones-model-450bt",
+                    "title": "هدفون بلوتوث جی بی ال مدل 450BT",
+                    "status": "تولید بعد از سفارش",
+                    "discount": 2,
+                    "id": "f0e2cd5f-39b1-41c4-98b4-41d62b972ba5",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/hqYDwt/934f65973213b316eec1a262a8be23e1.jpg",
+                    "url": "/product/sajadsystem/wuw-quick-charge-typ-c-cable-model-x95/",
+                    "old_price": 550000,
+                    "price": 510000,
+                    "slug": "wuw-quick-charge-typ-c-cable-model-x95",
+                    "title": "کابل شارژ سریع تایپ سی دبلیو یو دبلیو مدل X95",
+                    "status": "آماده در انبار",
+                    "discount": 7,
+                    "id": "cd33bf2b-c5a5-429c-ac88-3e22072dab51",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/9T8xEr/e95feeb6a868a358d82c5a78af8eb431.jpg",
+                    "url": "/product/sajadsystem/mi-true-wireless-earbuds-basic/",
+                    "old_price": 3650000,
+                    "price": 3400000,
+                    "slug": "mi-true-wireless-earbuds-basic",
+                    "title": "هدفون بی سیم شیائومی مدل Earbuds Basic ",
+                    "status": "آماده در انبار",
+                    "discount": 6,
+                    "id": "39d7e866-9b80-42fd-90b2-ebe07898aa08",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                },
+                {
+                    "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/g3Kbxx/f2c58914786b79bb45c1fdac6c445e72.jpg",
+                    "url": "/product/sajadsystem/wuw-quick-charge-microusb-cable-model-x85/",
+                    "old_price": 360000,
+                    "price": 320000,
+                    "slug": "wuw-quick-charge-microusb-cable-model-x85",
+                    "title": "کابل شارژ سریع میکرو یو اس بی دبلیو یو دبلیو مدل X85",
+                    "status": "آماده در انبار",
+                    "discount": 11,
+                    "id": "948a18a2-4511-4533-81d4-ff98d565d691",
+                    "shop": {
+                        "slug": "sajadsystem",
+                        "title": "سجاد سیستم",
+                        "url": "/sajadsystem/",
+                        "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                        "state": "کرمان"
+                    }
+                }
+            ],
+            "attributes": [
+                {
+                    "FK_Attribute": {
+                        "title": "رنگ",
+                        "unit": "-"
+                    },
+                    "value": "سفید-مشکی"
+                },
+                {
+                    "FK_Attribute": {
+                        "title": "نوع اتصال",
+                        "unit": "-"
+                    },
+                    "value": "بیسیم"
+                },
+                {
+                    "FK_Attribute": {
+                        "title": "مدت زمان اسندبای",
+                        "unit": "-"
+                    },
+                    "value": "100ساعت"
+                },
+                {
+                    "FK_Attribute": {
+                        "title": "مدت زمان شارژ",
+                        "unit": "-"
+                    },
+                    "value": "کمتراز2ونیم ساعت"
+                }
+            ],
+            "attributes_price": [],
+            "banners": [
+                {
+                    "image": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/Banners/RVjXTz/296b722161332164a99af3088d129e51.jpg",
+                    "id": 2263
+                },
+                {
+                    "image": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/Products/Banners/SD4Vk4/714b373204b0b3558843cf0f87946cdf.jpg",
+                    "id": 2264
+                }
+            ],
+            "reviews": [],
+            "net_weight": "30",
+            "weight_with_packing": "33",
+            "length_with_packing": "5",
+            "height_with_packaging": "20",
+            "story": "عملکرد\r\nهدفون بلوتوث جی بی ال مدل 450BT از فناوری بلوتوث نسخه 4.0 پشتیبانی می کند که می تواند از طریق آن حتی از فاصله 10 متری نیز به دستگاه هوشمند شما متصل شود و اتصالی پایدار، بدون تاخیر و بدون قطعی را برای شما فراهم کند. شما برای اتصال به این هدفون زیبا همچنین می توانید از کارت حافظه جانبی و کابل AUX نیز استفاده کنید و به صورت با سیم به هدفون خود متصل شوید.\r\nکیفیت صدا\r\nهدفون مدل 450BT از شرکت جی بی ال، از کیفیت صدای عالی بهره می برد به طوری که می تواند شما را ترغیب به خرید این محصول کند. این هدفون در هر گوشی خود یک درایور با قطر 32 میلیمتر دارد که صدایی بسیار قدرتمند به شما منتقل می کند. پاسخ فرکانسی محصول بین بازه 20 هرتز تا 20 کیلوهرتز است و از امپدانسی برابر با 32 اهم برخوردار است. در نتیجه قادر است تمام جزئیات آهنگ را به شما عرضه کند. علاوه بر آن، این مدل هدفون از صدای استریو و Extra bass پشتیبانی می کند، به این معنی که می تواند باسی عمیق و قدرتمند را به شما ارائه دهد.\r\nباتری\r\nهدفون بلوتوثی جی بی ال مدل 450BT مجهز به یک باتری لیتیوم یونی است که به وسیله درگاه microUSB در عرض 2 ساعت به طور کامل شارژ می شود و پس از آن تا 11 ساعت در پخش موسیقی و برقراری تماس شما را همراهی می کند. این باتری در حالت آماده به کار یا استندبای نیز می تواند تا 100 ساعت شارژ هدفون را نگه دارد. به طور کلی از دوام و ماندگاری بالایی برخوردار است و قادر است نگرانی شما را بابت تمام شدن باتری کاهش دهد. ",
+            "width_with_packing": "20",
+            "comments": [],
+            "status": "تولید بعد از سفارش",
+            "exception_post_range": [],
+            "post_range": [],
+            "sub_market": {
+                "title": "هدفون،هدست،هندزفری",
+                "market": {
+                    "title": "کالای دیجیتال",
+                    "url": "/markets/"
+                },
+                "url": "/markets/submarkets/headphone-headset-microphone/"
+            },
+            "shop": {
+                "slug": "sajadsystem",
+                "title": "سجاد سیستم",
+                "url": "/sajadsystem/",
+                "image_thumbnail_url": "/media/CACHE/images/media/Pictures/Markets/SubMarkets/Shops/iiK0hy/8e13b34983da79e852d23ad0404964ad.jpg",
+                "state": "کرمان"
+            }
+        }
+    ]
+}

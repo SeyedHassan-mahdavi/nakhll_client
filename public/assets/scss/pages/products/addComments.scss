@@ -1,0 +1,21 @@
+.wrapperAddComment{
+    width: 100%;
+    font-family: 'iranSans';
+    .topWrapper{
+        width: 90%;
+        direction: rtl;
+        margin: auto;
+        background-color: #fbfbfb;
+        .productImage{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .bottomWrapper{
+        width: 90%;
+        direction: rtl;
+        margin: auto;
+    }
+}

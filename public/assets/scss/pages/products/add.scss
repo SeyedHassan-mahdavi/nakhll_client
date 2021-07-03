@@ -1,0 +1,106 @@
+// add product
+.formAdd{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: #c25080 0px 1px 4px;
+    width: 75%;
+    padding: 20px 30px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 70px;
+    direction: rtl;
+    font-family: 'iranSans';
+    .firstDiv , .secondDiv{
+        width: 50%;
+        input{
+            border: 2px solid #c25080;
+            outline: none;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            margin: 20px 10px;
+            font-family: 'iranSans';
+            padding: 0px 10px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            .checkbox{
+                height: 25px;
+                width: 25px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                border: 1px solid #c25080;
+                border-radius: 4px;
+                outline: none;
+                transition-duration: 0.3s;
+                cursor: pointer;
+                margin: 0px;
+                &:checked {
+                    background-color: #c25080;
+                }
+            }
+            .sales{
+                background-color: rgba(0, 0, 0,0.1);
+                color: rgb(163, 163, 163);
+                border: none;
+                margin-right: 10px;
+            }
+        }
+        .wrapperUpload{
+            display: flex;
+            align-items: center;
+            margin: 0px;
+            .upload{
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        select{
+            width: 200px;
+            height: 40px;
+            border: 2px solid #c25080;
+            border-radius: 20px;
+            outline: none;
+            font-family: 'iranSans';
+            margin: 20px 10px;
+        }
+    }
+    .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 200px;
+        height: 40px;
+        background-color: #c25080;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        color: #fff;
+        font-family: 'iranSans';
+        margin-top: 20px;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=file]{
+    visibility: hidden;
+}

@@ -1,0 +1,93 @@
+// div wrapper
+.wrapperTabs{
+    width: 90%;
+    direction: rtl;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    .wrapperLink{
+        background-color: #fff;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 7px;
+        justify-content: flex-start;
+        span{
+            font-size: 14px !important;
+            width: 100px !important;
+            padding: 5px;
+            cursor: pointer;
+            color: #b1b1b1;
+            margin-left: 15px;
+        }
+    }
+    .first{
+        color:#8d8f92;
+        span{
+            padding: 10px 0px;
+        }
+    }
+    .second{
+        span{
+            padding: 10px 0px;
+        }
+    }
+    .colFirst{
+        img{
+            width: 110px;
+            height: 90px;
+            margin-bottom: 10px;
+        }
+        span{
+            padding: 3px 0px;
+            color: #838383;
+        }
+        input[type=range]{
+            margin-bottom: 15px;
+            -webkit-appearance: none;
+            width: 100%;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background: #f6f6f6;
+  border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 5px;
+  width: 5px;
+  border-radius: 7px;
+  background: #f6f6f6;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ac51b5;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  background: #f6f6f6;
+  border-radius: 25px;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: none;
+  height: 5px;
+  width: 5px;
+  background: #f6f6f6;
+}
+    }
+    .colSecond{
+        text-align: center;
+        p{
+            text-align: center;
+        }
+        .linkButton{
+            border: 2px solid #00a7e6;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 9px 0px;
+        }
+    }
+}

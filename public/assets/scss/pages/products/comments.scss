@@ -1,0 +1,23 @@
+.commentsWrapper{
+    .colFirst{
+        span{
+            font-size: large;
+            strong{
+                font-size: x-large;
+            }
+        }
+        .starRating{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 26px;
+            margin-top: 4px;
+            margin-bottom: 20px;
+            span{
+                font-size: 14px;
+                padding: 0px 10px;
+                color: #8d8d8d;
+            }
+        }
+    }
+}

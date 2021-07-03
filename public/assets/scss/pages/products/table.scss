@@ -1,0 +1,24 @@
+// table products
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  a{
+    text-decoration: none;
+  }
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+.deleteTd{
+  cursor: pointer;
+}
+th {
+  background-color: #c276de;
+  text-align: center !important;
+  color: white;
+}

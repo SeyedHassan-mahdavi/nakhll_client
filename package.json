@@ -1,0 +1,45 @@
+{
+  "name": "nextjslearn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "formik": "^2.2.9",
+    "jquery": "^3.6.0",
+    "json-server": "^0.16.3",
+    "jsonwebtoken": "^8.5.1",
+    "next": "11.0.1",
+    "next-images": "^1.8.1",
+    "react": "17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-bootstrap-table-next": "^4.0.3",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "react-select": "^4.3.1",
+    "react-star-rating-component": "^1.4.1",
+    "react-toastify": "^7.0.4",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.35.1",
+    "sweetalert2": "^11.0.18",
+    "swiper": "^6.7.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslint": "7.29.0",
+    "eslint-config-next": "11.0.1"
+  }
+}

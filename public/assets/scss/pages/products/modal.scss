@@ -1,0 +1,32 @@
+// div wrapper
+.modalProduct{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    z-index: 20;
+    // div content
+    &__div{
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+        animation-name: show;
+        animation-duration: 0.5s;
+        width: max-content;
+    }
+}
+// animation move down
+@keyframes move{
+    from {margin-top: -100%;}
+    to {margin-top: 0%;}
+}
+// animation apear
+@keyframes show{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
