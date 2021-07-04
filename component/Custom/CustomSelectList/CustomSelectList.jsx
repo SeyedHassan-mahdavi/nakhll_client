@@ -9,7 +9,7 @@ const CustomSelectList = ({
   return (
     <>
       <div>
-        {label && <label for={name}>{label}</label>}
+        {label && <label htmlFor={name}>{label}</label>}
         <div>
         <select
         id={name}

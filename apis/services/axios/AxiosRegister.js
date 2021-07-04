@@ -3,21 +3,31 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 
 //=================================================================\\
 export const instanceAxiosWithOutToken = Axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL,
+    withCredentials: true,
+
+    baseURL: "http://192.168.1.48:8000",
     headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
         'Access-Control-Allow-Credentials': 'true',
-        'Content-Type': ' application/json'
+        'Content-Type': ' application/json',
+        // 'Access-Control-Allow-Credentials': true
     },
     timeout: 18000,
+    credentials: 'include'
+
 });
+console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
+console.log(
+  '[Node.js only] ENV_LOCAL_VARIABLE:',
+  process.env.ENV_LOCAL_VARIABLE
+)
 
 // instanceAxiosWithOutToken.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
 // instanceAxiosWithOutToken.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 //=================================================================\\
 export const instanceAxiosWithToken = Axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL,
+    baseURL: process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE,
     timeout: 18000,
     headers: {
         'Access-Control-Allow-Origin': '*',

@@ -4,17 +4,36 @@ import styles from '../styles/Home.module.css'
 import { toastSuccessMessage } from "../utils/toastMessage/toastMessage"
 import { useEffect } from 'react';
 import CreateProduct from './createProduct';
+import { ApiRegister } from '../apis/services/apiRegister/ApiRegister';
+
 
 export default function Home() {
 
   useEffect(() => {
-    toastSuccessMessage('success');
+
+      console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
+  console.log(
+    '[Node.js only] ENV_LOCAL_VARIABLE:',
+    process.env.ENV_LOCAL_VARIABLE
+  )
+
+    const _handleRequestApi = async () => {
+      let loadData = null;
+      let dataUrl = '/app/api/v1/factor/shop/Khatun/uncompleted/';
+      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+      console.log("res uncom :", response);
+      // setImages(response);//==> output: {}
+  }
+  _handleRequestApi();
+
+    // toastSuccessMessage('success');
 
 
 
   }, []);
 
   return (
+    
 
     <div className="container">
       <div className="m-5 p-4 rounded bg-white">

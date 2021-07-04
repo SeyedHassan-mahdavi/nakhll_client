@@ -4,7 +4,7 @@ const CustomSwitchButton = ({ isSquare, name, label, ...otherProps }) => {
   return (
     <div className="d-flex justify-content-between">
       {label && (
-        <label className="ml-2" for={name}>
+        <label className="ml-2" htmlFor={name}>
           {label}
         </label>
       )}

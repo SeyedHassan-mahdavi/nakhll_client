@@ -218,7 +218,7 @@ const TakhfifComponent = () => {
                               value="count"
                               className="checkbox"
                             />
-                            <label for="min-bascket-count">
+                            <label htmlFor="min-bascket-count">
                               حداقل تعداد محصول در سبد
                           </label>
                           </div>
@@ -235,7 +235,7 @@ const TakhfifComponent = () => {
                               value="count"
                               className="checkbox"
                             />
-                            <label for="min-bascket-count">
+                            <label htmlFor="min-bascket-count">
                               حداقل میزان خرید
                           </label>
                           </div>
@@ -277,7 +277,7 @@ const TakhfifComponent = () => {
                             id="onceOnPerson"
                             className="checkbox"
                           />
-                          <label for="onceOnPerson" class="mb-0">
+                          <label htmlFor="onceOnPerson" class="mb-0">
                             امکان استفاده فقط یکبار برای هر فرد
                         </label>
                         </div>
@@ -290,7 +290,7 @@ const TakhfifComponent = () => {
                               value="count"
                               className="checkbox"
                             />
-                            <label for="min-bascket-count">
+                            <label htmlFor="min-bascket-count">
                               حداکثر تعداد استفاده از کد تخفیف
                           </label>
                           </div>
@@ -354,7 +354,7 @@ const TakhfifComponent = () => {
                         id="onceOnPerson"
                         className={styles.checkbox}
                       />
-                      <label for="onceOnPerson" class="mb-0">
+                      <label htmlFor="onceOnPerson" className="mb-0">
                         دنبال کنندگانم ببینند
                     </label>
                     </div>
@@ -365,7 +365,7 @@ const TakhfifComponent = () => {
                         id="onceOnPerson"
                         className={styles.checkbox}
                       />
-                      <label for="onceOnPerson" class="mb-0">
+                      <label htmlFor="onceOnPerson" className="mb-0">
                         قوانین ساخت کد تخفیف را مطالعه نموده و می‌پذیرم.
                     </label>
                     </div>

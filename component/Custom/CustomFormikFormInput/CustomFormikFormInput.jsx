@@ -56,7 +56,7 @@ const CustomFormikFormInput = ({
       <div>
         <div>
           {label && (
-            <label for={name}>
+            <label htmlFor={name}>
               {label}
               {tooltipTitle && (
                 <span className="ml-1">

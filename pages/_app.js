@@ -19,9 +19,13 @@ import '../public/assets/scss/bootstrap-rtl.min.css';
 
 
 import '../styles/globals.css'
+import { useRouter } from 'next/dist/client/router';
+import Layout from '../component/layout';
 
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+console.log(`router`, router)
 
   // const [user, setUser] = useState("");
   // const token = localStorage.getItem("token");
@@ -40,6 +44,10 @@ function MyApp({ Component, pageProps }) {
   //     }
   //   }
   // });
+  if (router.pathname.startsWith("/TakhfifComponent")) {
+    return <Layout> <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider> </Layout> 
+    
+  }
 
 
   return <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider>
