@@ -7,6 +7,8 @@ import useViewport from '../../../../component/viewPort';
 import MobileHeader from '../../../../component/mobileHeader';
 import CustomBadge from '../../../../component/Custom/customBadge';
 import CustomLabel from '../../../../component/Custom/customLabel';
+import MyLayout from "../../../../component/layout/Layout";
+
 // images
 import edit from '../../../../public/assets/image/productHeaderLink/edit.svg';
 import filter from '../../../../public/assets/image/productHeaderLink/filter.svg';
@@ -115,11 +117,11 @@ const Card = () => {
                             <a className={styles.product_header_link}>فیلتر</a>
                         </Link>
                         <Image src={sort} alt="sort" />
-                        <Link href={``}>
+                        <Link href={`/`}>
                             <a className={styles.product_header_link}>ترتیب نمایش</a>
                         </Link>
                         <Image src={edit} alt="edit" />
-                        <Link href={``}>
+                        <Link href={`/`}>
                             <a className={styles.product_header_link}>ویرایش گروهی</a>
                         </Link>
                     </div>
@@ -173,3 +175,5 @@ const Card = () => {
     );
 };
 export default Card;
+Card.Layout = MyLayout;
+
