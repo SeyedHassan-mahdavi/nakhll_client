@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 import { ToastContainer } from 'react-toastify';
-import { Layout } from '../component/layout/Layout';
+import Layout from '../component/layout/Layout';
 import { useRouter } from 'next/dist/client/router';
 import 'react-toastify/dist/ReactToastify.css';
 import '../public/assets/scss/bootstrap.min.css';
@@ -11,12 +11,12 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
-  console.log(`router`, router)
+  // console.log(`router`, router)
   const Layout
-    = Component.Layout ? Component.Layout : React.Fragment;
+    = Component.Layout ? Component.Layout : Component.Layout;
 
 
-  return <Layout> <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider></Layout>
+  return <Provider store={store}><ToastContainer /><Layout><Component {...pageProps} /></Layout></Provider>
 
 
 }

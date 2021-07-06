@@ -1,11 +1,14 @@
-import React from 'react'
-
-const index = () => {
+/**
+ * product component
+ * @param
+ * @returns void 
+ */
+function Product() {
     return (
         <div>
-            sdfdsfgrsdgfdxgdf
+            <h1>product page</h1>
         </div>
     )
 }
 
-export default index
+export default Product;

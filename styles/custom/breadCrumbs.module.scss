@@ -1,0 +1,19 @@
+.customBreadCrumbs{
+    width: 90%;
+    margin: auto;
+    background-color: #eaeaea;
+    color: #838383;
+    direction: rtl;
+    border-radius: 5px;
+    :last-child{
+        color: #ec406a;
+    }
+    a{
+        padding: 5px;
+        text-decoration: none;
+        color: #838383;
+    }
+    span{
+        padding: 5px;
+    }
+}

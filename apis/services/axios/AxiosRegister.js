@@ -16,11 +16,7 @@ export const instanceAxiosWithOutToken = Axios.create({
     credentials: 'include'
 
 });
-console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
-console.log(
-  '[Node.js only] ENV_LOCAL_VARIABLE:',
-  process.env.ENV_LOCAL_VARIABLE
-)
+
 
 // instanceAxiosWithOutToken.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
 // instanceAxiosWithOutToken.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
