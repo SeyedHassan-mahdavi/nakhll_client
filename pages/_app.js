@@ -1,32 +1,41 @@
 import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 import { ToastContainer } from 'react-toastify';
+import { Layout } from '../component/layout/Layout';
+import { useRouter } from 'next/dist/client/router';
 import 'react-toastify/dist/ReactToastify.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import '../public/assets/scss/bootstrap.min.css';
 import '../public/assets/scss/bootstrap-rtl.min.css';
-
-
-
-// import '../public/assets/js/jquery.min.js';
-// import '../public/assets/js/popper.min.js';
-// import '../public/assets/js/bootstrap.min.js';
-// import '../public/assets/js/custom.js';
-// import 'swiper/swiper-bundle.css';
-// import 'jquery/dist/jquery.min.js';
-// import 'bootstrap/dist/js/bootstrap.min.js';
-
-
 import '../styles/globals.css'
-import { useRouter } from 'next/dist/client/router';
-import Layout from '../component/layout';
 
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
-console.log(`router`, router)
+  console.log(`router`, router)
+  const Layout
+    = Component.Layout ? Component.Layout : React.Fragment;
 
+
+  return  <Provider store={store}><ToastContainer /><Layout><Component {...pageProps} /></Layout></Provider>
+
+
+}
+
+export default MyApp
+
+
+
+
+
+
+
+
+
+
+
+
+
+// test token
   // const [user, setUser] = useState("");
   // const token = localStorage.getItem("token");
   // let tokenRole = localStorage.getItem("role");
@@ -44,15 +53,7 @@ console.log(`router`, router)
   //     }
   //   }
   // });
-  if (router.pathname.startsWith("/TakhfifComponent")) {
-    return <Layout> <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider> </Layout> 
-    
-  }
+  // if (router.pathname.startsWith("/TakhfifComponent")) {
+  //   return <Layout> <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider> </Layout> 
 
-
-  return <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider>
-
-
-}
-
-export default MyApp
+  // }

@@ -125,6 +125,7 @@ const CreateProduct = () => {
                 validationSchema={validationSchema}
               >
                 <Fragment>
+                  <div style={{background:"red" , width:"300px" , height:"300px"}}></div>
                   <div>
                     <div>
                       <h5 className="mb-0 d-inline mr-2">عکس و ویدیو محصول*</h5>

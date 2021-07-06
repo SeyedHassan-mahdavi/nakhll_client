@@ -1,109 +1,210 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { toastSuccessMessage } from "../utils/toastMessage/toastMessage"
+// import styles from '../styles/Home.module.css'
+// import { toastSuccessMessage } from "../utils/toastMessage/toastMessage"
 import { useEffect } from 'react';
-import CreateProduct from './createProduct';
+// import CreateProduct from './createProduct';
 import { ApiRegister } from '../apis/services/apiRegister/ApiRegister';
+import MyLayout from "../component/layout/Layout";
+import styles from "../styles/dashboard/dashboard.module.css"
+import Link from "next/link"
 
 
 export default function Home() {
 
-  useEffect(() => {
+  // useEffect(() => {
 
-      console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
-  console.log(
-    '[Node.js only] ENV_LOCAL_VARIABLE:',
-    process.env.ENV_LOCAL_VARIABLE
-  )
+  //     console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
+  // console.log(
+  //   '[Node.js only] ENV_LOCAL_VARIABLE:',
+  //   process.env.ENV_LOCAL_VARIABLE
+  // )
 
-    const _handleRequestApi = async () => {
-      let loadData = null;
-      let dataUrl = '/app/api/v1/factor/shop/Khatun/uncompleted/';
-      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
-      console.log("res uncom :", response);
-      // setImages(response);//==> output: {}
-  }
-  _handleRequestApi();
+  //   const _handleRequestApi = async () => {
+  //     let loadData = null;
+  //     let dataUrl = '/app/api/v1/factor/shop/Khatun/uncompleted/';
+  //     let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+  //     console.log("res uncom :", response);
+  //     // setImages(response);//==> output: {}
+  // }
+  // _handleRequestApi();
 
-    // toastSuccessMessage('success');
+  //   // toastSuccessMessage('success');
 
 
 
-  }, []);
+  // }, []);
 
   return (
     
+<>
+      <div dir="rtl"  className={styles.left_one}>
+        <div className={styles.left_one_1}>
+          <i
+            className="fas fa-cart-plus fa-3x"
+            style={{ color: "#007aff" }}
+          ></i>
+          <h1> 8
 
-    <div className="container">
-      <div className="m-5 p-4 rounded bg-white">
-        <CreateProduct />
+          </h1>
+          <h4>سفارش ها تکمیل نشده</h4>
+        </div>
+        <div className={styles.left_one_1}>
+          <i
+            className="fas fa-user-clock fa-3x"
+            style={{ color: "#007aff" }}
+          ></i>
+          <h1>8</h1>
+          <h4>سفارش ها تکمیل نشده</h4>
+        </div>
+        <div className={styles.left_one_1}>
+          <i
+            className="far fa-comment-alt fa-3x"
+            style={{ color: "#007aff" }}
+          ></i>
+          <h1>8</h1>
+          <h4>سفارش ها تکمیل نشده</h4>
+        </div>
+        <div className={styles.left_one_1}>
+          <i className="fas fa-wallet fa-3x" style={{ color: "#007aff" }}></i>
+          <h1>8</h1>
+          <h4>سفارش ها تکمیل نشده</h4>
+        </div>
       </div>
-    </div>
+      <div dir="rtl" className={styles.left_two}>
+        {/* <Swiper
+          // spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          
+          <SwiperSlide>
+            <img src={one} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={two} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={three} />
+          </SwiperSlide>
+        </Swiper> */}
+      </div>
+      <div dir="rtl" className={styles.left_three}>
+        <div className={styles.left_three_head}>
+          <h3 style={{ margin: "1.5rem" }}>وضعیت محصول</h3>
+        </div>
+        <div className={styles.left_three_content}>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: " black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              8
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای فعال</h4>
+          </div>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: "black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              0
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
+            <h4 style={{ marginTop: "1rem" }}>کالا های در حال اتمام</h4>
+          </div>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: "black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              0
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای غیرفعال</h4>
+          </div>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: " black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              0
+            </h1>
+            <h3 style={{ display: " inline-block", color: "black" }}>عدد</h3>
+            <h4 style={{ marginTop: "1rem" }}>کالاهای ناموجود</h4>
+          </div>
+        </div>
+      </div>
+      <div dir="rtl" className={styles.left_three}>
+        <div className={styles.left_three_head}>
+          <h3 style={{ margin: "1.5rem" }}>وضعیت فروش</h3>
+        </div>
+        <div className={styles.left_three_content}>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: " black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              8,000,000
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>تومان</h3>
+            <h4 style={{ marginTop: "1rem" }}>فروش هفته جاری</h4>
+          </div>
+          <div className="">
+            <h1
+              style={{
+                display: " inline-block",
+                color: "black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              8,000,000
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>تومان</h3>
+            <h4 style={{ marginTop: "1rem" }}>فروش ماه گذشته</h4>
+          </div>
+          <div className="">
+            <h1
+              style={{
+                display: "inline-block",
+                color: "black",
+                marginLeft: "0.5rem",
+              }}
+            >
+              8,000,000
+            </h1>
+            <h3 style={{ display: "inline-block", color: "black" }}>عدد</h3>
+            <h4 style={{ marginTop: "1rem" }}>فروش هفته گذشته</h4>
+          </div>
+        </div>
+      </div>
+      <div dir="rtl" className={styles.left_five}>A5</div>
+    </>
+    
 
-    // <div className={styles.container}>
-    //   <Head>
-    //     <title>Create Next App</title>
-    //     <meta name="description" content="Generated by create next app" />
-    //     <link rel="icon" href="/favicon.ico" />
-    //   </Head>
 
-    //   <main className={styles.main}>
-    //     <h1 className={styles.title}>
-    //       Welcome to <a href="https://nextjs.org">Next.js!</a>
-    //     </h1>
-
-
-
-    //     <p className={styles.description}>
-    //       Get started by editing{' '}
-    //       <code className={styles.code}>pages/index.js</code>
-    //     </p>
-
-    //     <div className={styles.grid}>
-    //       <a href="https://nextjs.org/docs" className={styles.card}>
-    //         <h2>Documentation &rarr;</h2>
-    //         <p>Find in-depth information about Next.js features and API.</p>
-    //       </a>
-
-    //       <a href="https://nextjs.org/learn" className={styles.card}>
-    //         <h2>Learn &rarr;</h2>
-    //         <p>Learn about Next.js in an interactive course with quizzes!</p>
-    //       </a>
-
-    //       <a
-    //         href="https://github.com/vercel/next.js/tree/master/examples"
-    //         className={styles.card}
-    //       >
-    //         <h2>Examples &rarr;</h2>
-    //         <p>Discover and deploy boilerplate example Next.js projects.</p>
-    //       </a>
-
-    //       <a
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-    //         className={styles.card}
-    //       >
-    //         <h2>Deploy &rarr;</h2>
-    //         <p>
-    //           Instantly deploy your Next.js site to a public URL with Vercel.
-    //         </p>
-    //       </a>
-    //     </div>
-    //   </main>
-
-    //   <footer className={styles.footer}>
-    //     <a
-    //       href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Powered by{' '}
-    //       <span className={styles.logo}>
-    //         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-    //       </span>
-    //     </a>
-    //   </footer>
-    // </div>
+    
 
   )
 }
+
+
+Home.Layout = MyLayout;
