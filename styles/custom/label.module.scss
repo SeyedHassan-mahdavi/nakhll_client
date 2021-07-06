@@ -1,0 +1,16 @@
+// div labels
+.label{
+    display: inline-block;
+    direction: rtl;
+    font-family: 'vazir';
+    padding-top: 10px;
+    // item label
+    .span_label{
+        color: #5e7488;
+    }
+    // item value
+    .span--value{
+        color: #333333;
+        padding: 0px 10px;
+    }
+}

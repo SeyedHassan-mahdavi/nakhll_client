@@ -56,7 +56,7 @@ const DiscountPrice = () => {
     } else {
       setIsError(false);
     }
-  }, [values["priceWithDiscount"]]);
+  }, [values, isOffer]);
 
   return (
     <Fragment>
@@ -135,7 +135,7 @@ const CreateProduct = () => {
                     </div>
                     <p className={styles.helper_text}>
                       انتخاب عکس خوب روی بازدید و فروش شما تاثیر بسیار بالایی دارد.
-                </p>
+                    </p>
                   </div>
                   <hr />
                   <div>
@@ -144,7 +144,7 @@ const CreateProduct = () => {
                     </div>
                     <p className={styles.helper_text}>
                       برای جذب مشتری اطلاعات زیاد از محصولتان بنویسید.
-                </p>
+                    </p>
                   </div>
                   <div>
                     <div className="mt-4">

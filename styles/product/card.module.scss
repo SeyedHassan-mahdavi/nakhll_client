@@ -1,0 +1,74 @@
+.wrapper{
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  font-family: 'vazir';
+}
+
+.product_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #E0E6E9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin: 0px 14px;
+  margin-top: 6px;
+  font-weight: 500;
+  font-size: 4vw;
+  padding: 12px;
+  height: 43px;
+}
+
+.product_card{
+  direction: rtl;
+  margin: 0px 14px;
+  margin-top: 11px;
+  background: #FFFFFF;
+  border: 1px solid #E0E6E9;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 9px;
+  // first row
+  .first_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .product_name{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 4.3vw;
+      .image_product{
+        width: 45px; 
+        height: 45px;
+        background: #C4C4C4;
+        margin-left: 10px;
+      }
+    }
+  }
+  // second row
+  .second_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3.7vw;
+  }
+  // third row
+  .third_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    // icons
+    .icons{
+      font-size: 3.7vw;
+      margin-left: 10px;
+    }
+  }
+}
