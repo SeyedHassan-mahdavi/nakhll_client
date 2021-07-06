@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import Head from 'next/head'
+import Head from "next/head";
 
-import Image from 'next/image'
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 import styles from "../../styles/Layout.module.css";
 // import person from '../../public/assets/image/person.png'
-import nakhll from '../../public/assets/image/nakhl.png'
+// import nakhll from '../../public/assets/image/nakhl.png'
 
 // import person from "./person.png";
 // import nakhl from "./nakhl.png";
 // import { DashboardMain } from "./DashBoardMain/DashboardMain";
-
 
 export default function MyLayout({ children }) {
   const [counter, setCounter] = useState(0);
 
   //   return (
   //     <>
-  //       <p>      
+  //       <p>
   //         <button onClick={() => setCounter(counter + 1)}>
   //           Clicked {counter} Times
   //         </button>
@@ -30,7 +29,6 @@ export default function MyLayout({ children }) {
   // }
 
   return (
-
     <>
       <div>
         <Head>
@@ -39,17 +37,20 @@ export default function MyLayout({ children }) {
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
       </div>
 
       <header>
         <div className={styles.hedtop}>
           <span>
-            <Image
-              src={nakhll}
+            {/* <Image
+              // src={nakhll}
               alt="Picture of the author"
-            />
+            /> */}
           </span>
 
           <h1>داشبور مدیریت نخل</h1>
@@ -58,10 +59,10 @@ export default function MyLayout({ children }) {
         <div className={styles.hedtop_mobile}>
           <h1>پیشخوان</h1>
           <span>
-            <Image
-              src={nakhll}
+            {/* <Image
+              // src={nakhll}
               alt="Picture of the author"
-            />
+            /> */}
           </span>
         </div>
       </header>
@@ -99,71 +100,82 @@ export default function MyLayout({ children }) {
             </div>
           </section>
           <section className={styles.menu_card}>
-            {/* <Link
-              className="menu-card-item"
-              activeClassName="selectNav"
-              // href="/admin"
-            >
-              <span className="fas fa-home fa-2x "></span>
-              <h2>داشبورد</h2>
+            <Link href="/admizxzxn">
+              <span>
+                <span className="fas fa-home fa-2x "></span>
+                <h2>داشبورد</h2>
+              </span>
             </Link>
             <Link
-              className="menu-card-item"
-              activeClassName="selectNav"
-              // href="/buy"
+              className={styles.menu_card_item}
+              // activeClassName="selectNav"
+              href="/buy"
             >
-              <span className="fas fa-shopping-basket fa-2x"></span>
-              <h2>سفارشات</h2>
+              <span>
+                <span className={`fas fa-shopping-basket fa-2x`}></span>
+                <h2>سفارشات</h2>
+              </span>
             </Link>
             <Link
-              className="menu-card-item"
+              className={styles.menu_card_item}
               activeClassName="selectNav"
-              // to="/product"
+              href="/product"
             >
-              <span className="fas fa-box-open fa-2x "></span>
-              <h2>محصولات</h2>
+              <span>
+                <span className={`fas fa-box-open fa-2x `}></span>
+                <h2>محصولات</h2>
+              </span>
             </Link>
             <Link
-              className="menu-card-item non-item"
+              className={`styles.menu-card-item styles.non-item`}
               activeClassName="selectNav"
-              // to="/customer"
+              href="/customer"
             >
-              <span className="fas fa-users fa-2x"></span>
-              <h2>لیست مشتریان</h2>
-            </Link>
-            <Link
-              className="menu-card-item non-item"
-              activeClassName="selectNav"
-              // to="/Comments"
-            >
-              <span className="far fa-comment-dots fa-2x"></span>
-              <h2>دیدگاه ها</h2>
-            </Link>
-            <Link
-              className="menu-card-item"
-              activeClassName="selectNav"
-              // to="/financial"
-            >
-              <span className="fas fa-dollar-sign fa-2x"></span>
-              <h2>مالی</h2>
+              <span>
+                <span className="fas fa-users fa-2x"></span>
+                <h2>لیست مشتریان</h2>
+              </span>
             </Link>
             <Link
               className="menu-card-item non-item"
               activeClassName="selectNav"
-              // to="/off"
+              href="/Comments"
             >
-              <span className="fas fa-percent fa-2x"></span>
-              <h2>کد تخفیف</h2>
+              <span>
+                <span className="far fa-comment-dots fa-2x"></span>
+                <h2>دیدگاه ها</h2>
+              </span>
             </Link>
             <Link
               className="menu-card-item"
               activeClassName="selectNav"
-              // to="/support"
+              href="/financial"
             >
-              <span className="fas fa-life-ring fa-2x"></span>
-              <h2>پشتیبانی</h2>
+              <span>
+                <span className="fas fa-dollar-sign fa-2x"></span>
+                <h2>مالی</h2>
+              </span>
             </Link>
-           */}
+            <Link
+              className="menu-card-item non-item"
+              activeClassName="selectNav"
+              href="/off"
+            >
+              <span>
+                <span className="fas fa-percent fa-2x"></span>
+                <h2>کد تخفیف</h2>
+              </span>
+            </Link>
+            <Link
+              className="menu-card-item"
+              activeClassName="selectNav"
+              href="/support"
+            >
+              <span>
+                <span className="fas fa-life-ring fa-2x"></span>
+                <h2>پشتیبانی</h2>
+              </span>
+            </Link>
           </section>
         </div>
         {/* <!-- Left --> */}
@@ -239,8 +251,5 @@ export default function MyLayout({ children }) {
         </div>
       </div>
     </>
-
-  )
+  );
 }
-
-
