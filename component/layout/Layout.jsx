@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "../../styles/Layout.module.css";
+import MenuMobile from "../MenuMobile/MenuMobile";
 // import person from '../../public/assets/image/person.png'
-// import nakhll from '../../public/assets/image/nakhl.png'
+//  import nakhll from '../../public/assets/image/nakhl.png'
 
 // import person from "./person.png";
 // import nakhl from "./nakhl.png";
@@ -37,7 +38,7 @@ export default function MyLayout({ children }) {
         <div className={styles.hedtop}>
           <span>
             {/* <Image
-              // src={nakhll}
+              src={nakhll}
               alt="Picture of the author"
             /> */}
           </span>
@@ -179,65 +180,8 @@ export default function MyLayout({ children }) {
             <Route path="/support" component={Customer}></Route>
           </Switch> */}
         </div>
-
-        <div className={styles.menu_mobile}>
-          {/* <Link
-            className="menu-card-item-menu"
-            activeClassName="selectNav-menu"
-            // to="/admin"
-          >
-            <i
-              className="fas fa-home fa-2x "
-              style={{ marginTop: "1.2rem" }}
-            ></i>
-            <h2 style={{ marginTop: "1.2rem" }}>داشبورد</h2>
-          </Link>
-          <Link
-            className="menu-card-item-menu"
-            activeClassName="selectNav-menu"
-            // to="/buy"
-          >
-            <i
-              className="fas fa-shopping-basket fa-2x"
-              style={{ marginTop: "1.2rem" }}
-            ></i>
-            <h2 style={{ marginTop: "1.2rem" }}>سفارشات</h2>
-          </Link>
-          <Link
-            className="menu-card-item-menu"
-            activeClassName="selectNav-menu"
-            // to="/product"
-          >
-            <span
-              className="fas fa-box-open fa-2x"
-              style={{ marginTop: "1.2rem" }}
-            ></span>
-            <h2 style={{ marginTop: "1.2rem" }}>محصولات</h2>
-          </Link>
-          <Link
-            className="menu-card-item-menu "
-            activeClassName="selectNav-menu"
-            // to="/customer"
-          >
-            <span
-              className="fas fa-dollar-sign fa-2x"
-              style={{ marginTop: "1.2rem" }}
-            ></span>
-            <h2 style={{ marginTop: "1.2rem" }}>مالی</h2>
-          </Link>
-          <Link
-            className="menu-card-item-menu"
-            activeClassName="selectNav-menu"
-            // to="/Comments"
-          >
-            <i
-              className="fab fa-windows fa-2x"
-              style={{ marginTop: "1.2rem" }}
-            ></i>
-            <h2 style={{ marginTop: "1.2rem" }}>حجره</h2>
-          </Link>
-        */}
-        </div>
+          < MenuMobile/>
+        
       </div>
     </>
   );
