@@ -279,7 +279,7 @@ const TakhfifComponent = () => {
                             id="onceOnPerson"
                             className="checkbox"
                           />
-                          <label htmlFor="onceOnPerson" class="mb-0">
+                          <label htmlFor="onceOnPerson" className="mb-0">
                             امکان استفاده فقط یکبار برای هر فرد
                         </label>
                         </div>
