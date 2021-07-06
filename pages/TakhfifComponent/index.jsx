@@ -8,6 +8,8 @@ import CustomSelectList from "./../../component/Custom/CustomSelectList/CustomSe
 import CustomFormikButton from "./../../component/Custom/CustomFormikButton/CustomFormikButton";
 import CustomSwitchButton from "./../../component/Custom/CustomSwitchButton/CustomSwitchButton";
 import CustomDivNote from "./../../component/Custom/CustomDivNote/CustomDivNote";
+import MyLayout from "../../component/layout/Layout";
+
 // import CustomButton from "../../utils/Custom/CustomButton/CustomButton";
 // import ErrorMessage from "./../../utils/Custom/CustomErrorMessage/CustomErrorMessage";
 // import { numberSeparateUtils } from "../../utils/numberSeparateUtils/numberSeparateUtils";
@@ -395,3 +397,6 @@ const TakhfifComponent = () => {
 };
 
 export default TakhfifComponent;
+
+TakhfifComponent.Layout = MyLayout;
+

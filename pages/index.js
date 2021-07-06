@@ -5,6 +5,8 @@ import { toastSuccessMessage } from "../utils/toastMessage/toastMessage"
 import { useEffect } from 'react';
 import CreateProduct from './createProduct';
 import { ApiRegister } from '../apis/services/apiRegister/ApiRegister';
+import MyLayout from "../component/layout/Layout";
+import Link from "next/link"
 
 
 export default function Home() {
@@ -39,7 +41,9 @@ export default function Home() {
       <div className="m-5 p-4 rounded bg-white">
         <CreateProduct />
       </div>
+
     </div>
+
 
     // <div className={styles.container}>
     //   <Head>
@@ -107,3 +111,6 @@ export default function Home() {
 
   )
 }
+
+
+Home.Layout = MyLayout;
