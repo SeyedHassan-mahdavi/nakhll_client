@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     = Component.Layout ? Component.Layout : React.Fragment;
 
 
-  return <Layout> <Provider store={store}><ToastContainer /><Component {...pageProps} /></Provider></Layout>
+  return  <Provider store={store}><ToastContainer /><Layout><Component {...pageProps} /></Layout></Provider>
 
 
 }
