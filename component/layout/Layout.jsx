@@ -15,18 +15,7 @@ import styles from "../../styles/Layout.module.css";
 export default function MyLayout({ children }) {
   const [counter, setCounter] = useState(0);
 
-  //   return (
-  //     <>
-  //       <p>
-  //         <button onClick={() => setCounter(counter + 1)}>
-  //           Clicked {counter} Times
-  //         </button>
-  //       </p>
-
-  //       {children}
-  //     </>
-  //   )
-  // }
+ 
 
   return (
     <>
@@ -100,78 +89,78 @@ export default function MyLayout({ children }) {
             </div>
           </section>
           <section className={styles.menu_card}>
-            <Link href="/admizxzxn">
-              <span>
+            <Link href="/">
+              <span className={styles.menu_card_item}>
                 <span className="fas fa-home fa-2x "></span>
                 <h2>داشبورد</h2>
               </span>
             </Link>
             <Link
-              className={styles.menu_card_item}
+              
               // activeClassName="selectNav"
-              href="/buy"
+              href="/TakhfifComponent"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className={`fas fa-shopping-basket fa-2x`}></span>
                 <h2>سفارشات</h2>
               </span>
             </Link>
             <Link
-              className={styles.menu_card_item}
+              
               activeClassName="selectNav"
               href="/product"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className={`fas fa-box-open fa-2x `}></span>
                 <h2>محصولات</h2>
               </span>
             </Link>
             <Link
-              className={`styles.menu-card-item styles.non-item`}
+              
               activeClassName="selectNav"
               href="/customer"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className="fas fa-users fa-2x"></span>
                 <h2>لیست مشتریان</h2>
               </span>
             </Link>
             <Link
-              className="menu-card-item non-item"
+              
               activeClassName="selectNav"
               href="/Comments"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className="far fa-comment-dots fa-2x"></span>
                 <h2>دیدگاه ها</h2>
               </span>
             </Link>
             <Link
-              className="menu-card-item"
+              
               activeClassName="selectNav"
               href="/financial"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className="fas fa-dollar-sign fa-2x"></span>
                 <h2>مالی</h2>
               </span>
             </Link>
             <Link
-              className="menu-card-item non-item"
+              
               activeClassName="selectNav"
               href="/off"
             >
-              <span>
+              <span  className={styles.menu_card_item}>
                 <span className="fas fa-percent fa-2x"></span>
                 <h2>کد تخفیف</h2>
               </span>
             </Link>
             <Link
-              className="menu-card-item"
+             
               activeClassName="selectNav"
               href="/support"
             >
-              <span>
+              <span className={styles.menu_card_item}>
                 <span className="fas fa-life-ring fa-2x"></span>
                 <h2>پشتیبانی</h2>
               </span>

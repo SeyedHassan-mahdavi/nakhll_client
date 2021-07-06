@@ -391,3 +391,98 @@ input:checked + .slider:before {
   text-decoration: line-through;
 }
 /* End Discount Style */
+
+
+
+/* MIlad for test */
+:root {
+  --background1: #e5e5e5;
+  --background2: #ffffff;
+  --border: 1px solid #e0e6e9;
+  --radius: 5px;
+  --shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+  --color1: #5e7488;
+  --color2: #364254;
+  --hover: #007aff;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--color1);
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background1);
+  font-family: "IRANSansB" !important;
+}
+
+/* font-size */
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: #a4aebb;
+}
+
+  
+@media (max-width: 1100px) {
+  .menu-mobile {
+    display: -ms-grid;
+    display: grid;
+    z-index: 1000;
+  }
+}
+
+.menu-card-item-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.selectNav-menu {
+  color: var(--hover);
+}
+
+
+
+.menu-card-item h2 {
+  margin-right: 1.7rem;
+}
+
+.selectNav {
+  color: var(--hover);
+  border-left: 2px solid #007aff;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=DashboardM.css.map */
