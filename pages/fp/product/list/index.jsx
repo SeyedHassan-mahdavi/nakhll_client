@@ -1,7 +1,8 @@
 // next libraries
 import Head from "next/head";
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+
 // components
 import useViewport from '../../../../component/viewPort';
 import MobileHeader from '../../../../component/mobileHeader';
@@ -20,7 +21,7 @@ const Card = () => {
 
     const { width } = useViewport();
     const breakpoint = 620;
-
+    
     const data = [
         {
             name: "گل محمدی",
@@ -99,6 +100,7 @@ const Card = () => {
         <>
             {width < breakpoint &&
                 <div className={styles.wrapper}>
+                    
                     <Head>
                         <title>My page title</title>
                         <link

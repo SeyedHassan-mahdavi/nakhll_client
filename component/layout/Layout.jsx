@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
 import styles from "../../styles/Layout.module.css";
 import MenuMobile from "../MenuMobile/MenuMobile";
 // import person from '../../public/assets/image/person.png'
@@ -16,7 +16,7 @@ import MenuMobile from "../MenuMobile/MenuMobile";
 export default function MyLayout({ children }) {
   const [counter, setCounter] = useState(0);
 
- 
+  const router = useRouter();
 
   return (
     <>
@@ -34,142 +34,147 @@ export default function MyLayout({ children }) {
         </Head>
       </div>
 
-      <header>
-        <div className={styles.hedtop}>
-          <span>
-            {/* <Image
+      {router.pathname == "/" && (
+        <header>
+          <div className={styles.hedtop}>
+            <span>
+              {/* <Image
               src={nakhll}
               alt="Picture of the author"
             /> */}
-          </span>
+            </span>
 
-          <h1>داشبور مدیریت نخل</h1>
-        </div>
+            <h1> داشبور مدیریت نخل</h1>
+          </div>
 
-        <div className={styles.hedtop_mobile}>
-          <h1>پیشخوان</h1>
-          <span>
-            {/* <Image
+          <div className={styles.hedtop_mobile}>
+            <h1>پیشخوان</h1>
+            <span>
+              {/* <Image
               // src={nakhll}
               alt="Picture of the author"
             /> */}
-          </span>
-        </div>
-      </header>
-      <div className={styles.wrapper}>
+            </span>
+          </div>
+        </header>
+      )}
+      <div
+        className={`${
+          router.pathname == "/" ? styles.wrapper : styles.wrapperProduct
+        }`}
+      >
         {/* <!-- Right  SideBar--> */}
-        <div className={styles.Right}>
-          <section className={styles.info_card}>
-            <div className={styles.info_card_pic}>
-              <div className={styles.info_card_pic_person}></div>
-            </div>
-            <div className="info-cardH">
-              <h1
-                style={{
-                  paddingTop: "1.7rem",
-                  textAlign: "center",
-                  paddingBottom: "2.9rem",
-                }}
+        {router.pathname == "/" && (
+          <div className={styles.Right}>
+            <section className={styles.info_card}>
+              <div className={styles.info_card_pic}>
+                <div className={styles.info_card_pic_person}></div>
+              </div>
+              <div className="info-cardH">
+                <h1
+                  style={{
+                    paddingTop: "1.7rem",
+                    textAlign: "center",
+                    paddingBottom: "2.9rem",
+                  }}
+                >
+                  حجره طلاسازی
+                </h1>
+              </div>
+              <div className={styles.info_card_btn}>
+                <div className={styles.info_card_btn_one}>
+                  <i className="far fa-envelope fa-2x"></i>
+                  <h4 style={{ textAlign: "center" }}>پیام ها</h4>
+                </div>
+                <div className={styles.info_card_btn_one}>
+                  <i className="fas fa-user-cog fa-2x"></i>
+                  <h4 style={{ textAlign: "center" }}>تنظیمات</h4>
+                </div>
+                <div className={styles.info_card_btn_one}>
+                  <i className="fas fa-sign-out-alt fa-2x"></i>
+                  <h4 style={{ textAlign: "center" }}>خروج</h4>
+                </div>
+              </div>
+            </section>
+            <section className={styles.menu_card}>
+              <Link href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}}  className="fas fa-home fa-2x "></span>
+                  <h2>داشبورد</h2>
+                </span>
+              </Link>
+              <Link
+                // activeClassName="selectNav"
+                href="/"
               >
-                حجره طلاسازی
-              </h1>
-            </div>
-            <div className={styles.info_card_btn}>
-              <div className={styles.info_card_btn_one}>
-                <i className="far fa-envelope fa-2x"></i>
-                <h4 style={{ textAlign: "center" }}>پیام ها</h4>
-              </div>
-              <div className={styles.info_card_btn_one}>
-                <i className="fas fa-user-cog fa-2x"></i>
-                <h4 style={{ textAlign: "center" }}>تنظیمات</h4>
-              </div>
-              <div className={styles.info_card_btn_one}>
-                <i className="fas fa-sign-out-alt fa-2x"></i>
-                <h4 style={{ textAlign: "center" }}>خروج</h4>
-              </div>
-            </div>
-          </section>
-          <section className={styles.menu_card}>
-            <Link href="/">
-              <span className={styles.menu_card_item}>
-                <span className="fas fa-home fa-2x "></span>
-                <h2>داشبورد</h2>
-              </span>
-            </Link>
-            <Link
-              
-              // activeClassName="selectNav"
-              href="/TakhfifComponent"
-            >
-              <span className={styles.menu_card_item}>
-                <span className={`fas fa-shopping-basket fa-2x`}></span>
-                <h2>سفارشات</h2>
-              </span>
-            </Link>
-            <Link
-              
-              activeClassName="selectNav"
-              href="/product"
-            >
-              <span className={styles.menu_card_item}>
-                <span className={`fas fa-box-open fa-2x `}></span>
-                <h2>محصولات</h2>
-              </span>
-            </Link>
-            <Link
-              
-              activeClassName="selectNav"
-              href="/customer"
-            >
-              <span className={styles.menu_card_item}>
-                <span className="fas fa-users fa-2x"></span>
-                <h2>لیست مشتریان</h2>
-              </span>
-            </Link>
-            <Link
-              
-              activeClassName="selectNav"
-              href="/Comments"
-            >
-              <span className={styles.menu_card_item}>
-                <span className="far fa-comment-dots fa-2x"></span>
-                <h2>دیدگاه ها</h2>
-              </span>
-            </Link>
-            <Link
-              
-              activeClassName="selectNav"
-              href="/financial"
-            >
-              <span className={styles.menu_card_item}>
-                <span className="fas fa-dollar-sign fa-2x"></span>
-                <h2>مالی</h2>
-              </span>
-            </Link>
-            <Link
-              
-              activeClassName="selectNav"
-              href="/off"
-            >
-              <span  className={styles.menu_card_item}>
-                <span className="fas fa-percent fa-2x"></span>
-                <h2>کد تخفیف</h2>
-              </span>
-            </Link>
-            <Link
-             
-              activeClassName="selectNav"
-              href="/support"
-            >
-              <span className={styles.menu_card_item}>
-                <span className="fas fa-life-ring fa-2x"></span>
-                <h2>پشتیبانی</h2>
-              </span>
-            </Link>
-          </section>
-        </div>
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span style={{ marginLeft:"18px"}}  className={`fas fa-shopping-basket fa-2x`}></span>
+                  <h2>سفارشات</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/fp/product/list">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}} className={`fas fa-box-open fa-2x `}></span>
+                  <h2>محصولات</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}} className="fas fa-users fa-2x"></span>
+                  <h2>لیست مشتریان</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}}  className="far fa-comment-dots fa-2x"></span>
+                  <h2>دیدگاه ها</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"25px"}}  className="fas fa-dollar-sign fa-2x"></span>
+                  <h2>مالی</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}}  className="fas fa-percent fa-2x"></span>
+                  <h2>کد تخفیف</h2>
+                </span>
+              </Link>
+              <Link activeClassName="selectNav" href="/">
+                <span className={`${styles.menu_card_item}   ${
+                    router.pathname == "/" ? styles.selectNav : ""
+                  }`}>
+                  <span style={{ marginLeft:"18px"}}  className="fas fa-life-ring fa-2x"></span>
+                  <h2>پشتیبانی</h2>
+                </span>
+              </Link>
+            </section>
+          </div>
+        )}
         {/* <!-- Left --> */}
-        <div className={styles.left}>
+        <div
+          className={`${
+            router.pathname == "/" ? styles.left : styles.leftProduct
+          }`}
+        >
           {children}
 
           {/* <Switch>
@@ -180,8 +185,7 @@ export default function MyLayout({ children }) {
             <Route path="/support" component={Customer}></Route>
           </Switch> */}
         </div>
-          < MenuMobile/>
-        
+        <MenuMobile />
       </div>
     </>
   );
