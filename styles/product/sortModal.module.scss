@@ -1,0 +1,34 @@
+// wrapper
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    direction: rtl;
+    font-family: 'vazir';
+    width: 230px;
+    height: 190px;
+    // header
+    .header{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: #828E9C;
+        margin-bottom: 30px;
+    }
+    // div item
+    .sort_item_wrapper{
+        display: flex;
+        flex-direction: column;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: right;
+        color: #364254;
+        cursor: pointer;
+        // span
+        .sort_item{
+            margin-bottom: 21px;
+        }
+    }
+}

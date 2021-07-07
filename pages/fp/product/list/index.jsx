@@ -2,12 +2,15 @@
 import Head from "next/head";
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from "next/router";
+import { useState } from 'react';
 // components
 import useViewport from '../../../../component/viewPort';
 import MobileHeader from '../../../../component/mobileHeader';
 import CustomBadge from '../../../../component/Custom/customBadge';
 import CustomLabel from '../../../../component/Custom/customLabel';
+import GerenalModal from '../../../../component/generalModal';
+import Sort from '../../../../component/product/sort';
+import Edit from '../../../../component/product/edit';
 import MyLayout from "../../../../component/layout/Layout";
 
 // images
@@ -19,9 +22,11 @@ import styles from "../../../../styles/product/card.module.scss";
 
 const Card = () => {
 
+    let [showModalSort, setShowModalSort] = useState(false);
+    let [showModalEdit, setShowModalEdit] = useState(false);
     const { width } = useViewport();
     const breakpoint = 620;
-    
+
     const data = [
         {
             name: "گل محمدی",
@@ -100,7 +105,7 @@ const Card = () => {
         <>
             {width < breakpoint &&
                 <div className={styles.wrapper}>
-                    
+
                     <Head>
                         <title>My page title</title>
                         <link
@@ -119,23 +124,23 @@ const Card = () => {
                             <a className={styles.product_header_link}>فیلتر</a>
                         </Link>
                         <Image src={sort} alt="sort" />
-                        <Link href={`/`}>
-                            <a className={styles.product_header_link}>ترتیب نمایش</a>
-                        </Link>
+                        <span className={styles.product_header_link} onClick={() => {
+                            setShowModalSort(showModal => !showModal);
+                        }}>ترتیب نمایش</span>
                         <Image src={edit} alt="edit" />
-                        <Link href={`/`}>
-                            <a className={styles.product_header_link}>ویرایش گروهی</a>
-                        </Link>
+                        <span className={styles.product_header_link} onClick={() => {
+                            setShowModalEdit(showModal => !showModal);
+                        }}>ویرایش گروهی</span>
                     </div>
                     {data.map((value, index) => {
                         return (
                             <div key={index} className={`${styles.product_card}`}>
                                 <div className={styles.first_row}>
-                                    <div className={styles.product_name}>
+                                    <div className={styles.product_name_wrapper}>
                                         <div className={`${styles.image_product}`}></div>
-                                        <h6>{value.name}</h6>
+                                        <h6 className={`${styles.name_product}`}>{value.name}</h6>
                                     </div>
-                                    <i className="fas fa-ellipsis-v"></i>
+                                    <i className={`fas fa-ellipsis-v ${styles.icon_more}`}></i>
                                 </div>
                                 <div className={styles.second_row}>
                                     <CustomLabel value={value.mojadi} label="موجودی" />
@@ -173,6 +178,12 @@ const Card = () => {
 
                 </div>
             }
+            <GerenalModal show={showModalSort} onClose={() => {
+                setShowModalSort(showModal => !showModal);
+            }} content={<Sort />} />
+            <GerenalModal show={showModalEdit} onClose={() => {
+                setShowModalEdit(showModal => !showModal);
+            }} content={<Edit />} />
         </>
     );
 };

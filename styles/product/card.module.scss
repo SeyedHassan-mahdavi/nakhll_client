@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'vazir';
+  height: 100vh;
 }
 
 .product_header{
@@ -19,6 +20,7 @@
   font-size: 4vw;
   padding: 12px;
   height: 43px;
+  cursor: pointer;
 }
 
 .product_card{
@@ -37,17 +39,25 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    .product_name{
+    .product_name_wrapper{
       display: flex;
       flex-direction: row;
       align-items: center;
-      font-size: 4.3vw;
+      .name_product{
+        font-size: 4.3vw !important;
+      }
       .image_product{
         width: 45px; 
         height: 45px;
         background: #C4C4C4;
         margin-left: 10px;
       }
+    }
+    // icon more
+    .icon_more{
+      font-size: 5vw;
+      color: #5E7488;
+      cursor: pointer;
     }
   }
   // second row
