@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/Layout.module.css";
 import MenuMobile from "../MenuMobile/MenuMobile";
+// components
+import useViewport from "../viewPort/index";
 // import person from '../../public/assets/image/person.png'
 //  import nakhll from '../../public/assets/image/nakhl.png'
 
@@ -17,7 +19,8 @@ export default function MyLayout({ children }) {
   const [counter, setCounter] = useState(0);
 
   const router = useRouter();
-
+  const { width } = useViewport();
+  const breakpoint = 620;
   return (
     <>
       <div>
@@ -64,7 +67,7 @@ export default function MyLayout({ children }) {
         }`}
       >
         {/* <!-- Right  SideBar--> */}
-        {router.pathname == "/" && (
+        {true && (
           <div className={styles.Right}>
             <section className={styles.info_card}>
               <div className={styles.info_card_pic}>
@@ -98,71 +101,109 @@ export default function MyLayout({ children }) {
             </section>
             <section className={styles.menu_card}>
               <Link href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}}  className="fas fa-home fa-2x "></span>
-                  <h2>داشبورد</h2>
-                </span>
-              </Link>
-              <Link
-                // activeClassName="selectNav"
-                href="/"
-              >
                 <span
                   className={`${styles.menu_card_item}   ${
                     router.pathname == "/" ? styles.selectNav : ""
                   }`}
                 >
-                  <span style={{ marginLeft:"18px"}}  className={`fas fa-shopping-basket fa-2x`}></span>
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className="fas fa-home fa-2x "
+                  ></span>
+                  <h2>داشبورد</h2>
+                </span>
+              </Link>
+              <Link
+                // activeClassName="selectNav"
+                href="/fp/order"
+              >
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/order" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className={`fas fa-shopping-basket fa-2x`}
+                  ></span>
                   <h2>سفارشات</h2>
                 </span>
               </Link>
               <Link activeClassName="selectNav" href="/fp/product/list">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}} className={`fas fa-box-open fa-2x `}></span>
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/product/list" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className={`fas fa-box-open fa-2x `}
+                  ></span>
                   <h2>محصولات</h2>
                 </span>
               </Link>
-              <Link activeClassName="selectNav" href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}} className="fas fa-users fa-2x"></span>
+              <Link activeClassName="selectNav" href="/fp/customer">
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/customer" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className="fas fa-users fa-2x"
+                  ></span>
                   <h2>لیست مشتریان</h2>
                 </span>
               </Link>
-              <Link activeClassName="selectNav" href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}}  className="far fa-comment-dots fa-2x"></span>
+              <Link activeClassName="selectNav" href="/fp/comments">
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/comments" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className="far fa-comment-dots fa-2x"
+                  ></span>
                   <h2>دیدگاه ها</h2>
                 </span>
               </Link>
-              <Link activeClassName="selectNav" href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"25px"}}  className="fas fa-dollar-sign fa-2x"></span>
+              <Link activeClassName="selectNav" href="/fp/financial">
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/financial" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "25px" }}
+                    className="fas fa-dollar-sign fa-2x"
+                  ></span>
                   <h2>مالی</h2>
                 </span>
               </Link>
-              <Link activeClassName="selectNav" href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}}  className="fas fa-percent fa-2x"></span>
+              <Link activeClassName="selectNav" href="/fp/discount">
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/discount" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className="fas fa-percent fa-2x"
+                  ></span>
                   <h2>کد تخفیف</h2>
                 </span>
               </Link>
-              <Link activeClassName="selectNav" href="/">
-                <span className={`${styles.menu_card_item}   ${
-                    router.pathname == "/" ? styles.selectNav : ""
-                  }`}>
-                  <span style={{ marginLeft:"18px"}}  className="fas fa-life-ring fa-2x"></span>
+              <Link activeClassName="selectNav" href="/fp/support">
+                <span
+                  className={`${styles.menu_card_item}   ${
+                    router.pathname == "/fp/support" ? styles.selectNav : ""
+                  }`}
+                >
+                  <span
+                    style={{ marginLeft: "18px" }}
+                    className="fas fa-life-ring fa-2x"
+                  ></span>
                   <h2>پشتیبانی</h2>
                 </span>
               </Link>
