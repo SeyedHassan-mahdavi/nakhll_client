@@ -63,11 +63,13 @@ export default function MyLayout({ children }) {
       )}
       <div
         className={`${
-          router.pathname == "/" ? styles.wrapper : styles.wrapperProduct
+          width < breakpoint && router.pathname == "/fp/product/list"
+            ? styles.wrapperProduct
+            : styles.wrapper
         }`}
       >
         {/* <!-- Right  SideBar--> */}
-        {true && (
+        {!(width < breakpoint && router.pathname == "/fp/product/list") && (
           <div className={styles.Right}>
             <section className={styles.info_card}>
               <div className={styles.info_card_pic}>
@@ -132,7 +134,9 @@ export default function MyLayout({ children }) {
               <Link activeClassName="selectNav" href="/fp/product/list">
                 <span
                   className={`${styles.menu_card_item}   ${
-                    router.pathname == "/fp/product/list" ? styles.selectNav : ""
+                    router.pathname == "/fp/product/list"
+                      ? styles.selectNav
+                      : ""
                   }`}
                 >
                   <span
