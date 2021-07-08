@@ -15,7 +15,6 @@ import useViewport from "../viewPort/index";
 // import nakhl from "./nakhl.png";
 // import { DashboardMain } from "./DashBoardMain/DashboardMain";
 
-
 export default function MyLayout({ children }) {
   const [counter, setCounter] = useState(0);
 
@@ -64,13 +63,17 @@ export default function MyLayout({ children }) {
       )}
       <div
         className={`${
-          width < breakpoint && router.pathname == "/fp/product/list"
+          (width < breakpoint && router.pathname == "/fp/product/list") ||
+          (width < breakpoint && router.pathname == "/fp/product/list/filter")
             ? styles.wrapperProduct
             : styles.wrapper
         }`}
       >
         {/* <!-- Right  SideBar--> */}
-        {!(width < breakpoint && router.pathname == "/fp/product/list") && (
+        {!(
+          (width < breakpoint && router.pathname == "/fp/product/list") ||
+          (width < breakpoint && router.pathname == "/fp/product/list/filter")
+        ) && (
           <div className={styles.Right}>
             <section className={styles.info_card}>
               <div className={styles.info_card_pic}>
