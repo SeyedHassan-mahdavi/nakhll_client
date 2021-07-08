@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../public/assets/scss/bootstrap.min.css';
 import '../public/assets/scss/bootstrap-rtl.min.css';
 import '../styles/globals.css'
+// Import Swiper styles
+import 'swiper/swiper.scss';
 
 
 function MyApp({ Component, pageProps }) {

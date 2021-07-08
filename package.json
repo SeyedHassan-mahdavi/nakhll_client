@@ -35,7 +35,7 @@
     "redux-thunk": "^2.3.0",
     "sass": "^1.35.1",
     "sweetalert2": "^11.0.18",
-    "swiper": "^6.7.1",
+    "swiper": "^6.7.5",
     "yup": "^0.32.9"
   },
   "devDependencies": {

@@ -1,17 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 // import styles from '../styles/Home.module.css'
 // import { toastSuccessMessage } from "../utils/toastMessage/toastMessage"
-import { useEffect } from 'react';
+import { useEffect } from "react";
 // import CreateProduct from './createProduct';
-import { ApiRegister } from '../apis/services/apiRegister/ApiRegister';
+import { ApiRegister } from "../apis/services/apiRegister/ApiRegister";
 import MyLayout from "../component/layout/Layout";
-import styles from "../styles/dashboard/dashboard.module.css"
-import Link from "next/link"
+import styles from "../styles/dashboard/dashboard.module.css";
+import Link from "next/link";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Home() {
-
   // useEffect(() => {
 
   //     console.log('[Node.js only] ENV_VARIABLE:', process.env.ENV_VARIABLE)
@@ -31,22 +32,17 @@ export default function Home() {
 
   //   // toastSuccessMessage('success');
 
-
-
   // }, []);
 
   return (
-    
-<>
-      <div dir="rtl"  className={styles.left_one}>
+    <>
+      <div dir="rtl" className={styles.left_one}>
         <div className={styles.left_one_1}>
           <i
             className="fas fa-cart-plus fa-3x"
             style={{ color: "#007aff" }}
           ></i>
-          <h1> 8
-
-          </h1>
+          <h1> 8</h1>
           <h4>سفارش ها تکمیل نشده</h4>
         </div>
         <div className={styles.left_one_1}>
@@ -72,24 +68,25 @@ export default function Home() {
         </div>
       </div>
       <div dir="rtl" className={styles.left_two}>
-        {/* <Swiper
+        <Swiper
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
           // spaceBetween={50}
           slidesPerView={1}
           navigation
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          
           <SwiperSlide>
-            <img src={one} />
+            <div style={{ background: "red", height: "269px" }}></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={two} />
+          <div style={{ background: "blue", height: "269px" }}></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={three} />
+          <div style={{ background: "gold", height: "269px" }}></div>
           </SwiperSlide>
-        </Swiper> */}
+        </Swiper>
       </div>
       <div dir="rtl" className={styles.left_three}>
         <div className={styles.left_three_head}>
@@ -196,15 +193,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div dir="rtl" className={styles.left_five}>A5</div>
+      <div dir="rtl" className={styles.left_five}>
+        A5
+      </div>
     </>
-    
-
-
-    
-
-  )
+  );
 }
-
 
 Home.Layout = MyLayout;

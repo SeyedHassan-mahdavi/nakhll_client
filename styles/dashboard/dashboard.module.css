@@ -324,6 +324,7 @@
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   /* background: url(ebad.jpg); */
+  cursor: pointer;
 }
 
 .left_three {
