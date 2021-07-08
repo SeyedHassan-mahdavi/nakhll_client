@@ -63,16 +63,15 @@ export default function MyLayout({ children }) {
       )}
       <div
         className={`${
-          (width < breakpoint && router.pathname == "/fp/product/list") ||
-          (width < breakpoint && router.pathname == "/fp/product/list/filter")
+          (width < breakpoint && router.pathname !== "/") 
+          
             ? styles.wrapperProduct
             : styles.wrapper
         }`}
       >
         {/* <!-- Right  SideBar--> */}
         {!(
-          (width < breakpoint && router.pathname == "/fp/product/list") ||
-          (width < breakpoint && router.pathname == "/fp/product/list/filter")
+          (width < breakpoint && router.pathname !== "/") 
         ) && (
           <div className={styles.Right}>
             <section className={styles.info_card}>
