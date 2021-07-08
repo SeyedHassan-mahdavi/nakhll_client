@@ -1,0 +1,43 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    font-family: 'vazir';
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px;
+        height: 46px;
+        background: #FFFFFF;
+        border: 1px solid #E0E6E9;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-weight: normal;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        color: #5E7488;
+        margin: 10px 15px;
+    }
+    .card{
+        height: 62px;
+        background: #FFFFFF;
+        border: 1px solid #E0E6E9;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        font-weight: normal;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        color: #364254;
+        padding: 14px;
+        margin: 0px 15px;
+        margin-bottom: 10px;
+    }
+}

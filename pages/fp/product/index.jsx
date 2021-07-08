@@ -1,3 +1,4 @@
+import Layout from '../../../component/layout/Layout';
 /**
  * product component
  * @param
@@ -12,3 +13,4 @@ function Product() {
 }
 
 export default Product;
+Product.Layout = Layout;

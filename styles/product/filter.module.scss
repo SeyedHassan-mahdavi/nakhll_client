@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'vazir';
+    height: 100vh;
     // form
     .form{
         background-color: #E5E5E5;
@@ -23,7 +24,7 @@
             // header
             .form_header{
                 font-weight: 500;
-                font-size: 4.3vw;
+                font-size: 4.3vw !important;
                 color: #364254;
                 text-align: right;
             }
@@ -50,6 +51,13 @@
                 .form_status_checkbox{
                     border: 1px solid #DADADA;
                     margin: 0px 5px;
+                    width: 15px;
+                    height: 15px;
+                }
+                .form_status_checkbox:checked{
+                    background-color: #0E4DA4;
+                    width: 15px;
+                    height: 15px;
                 }
             }
             // label
@@ -65,6 +73,10 @@
             }
             // input
             .form_card_input{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
                 width: 30%;
                 height: 27px;
                 background: #EBEBEB;
@@ -75,7 +87,7 @@
                 font-size: 4vw;
                 color: #5E7488;
                 margin: 0px 3px;
-                padding: 0px 10px;
+                padding: 5px 10px;
             }
             // input range
             input[type=range].form_card_input_range {
@@ -126,51 +138,51 @@
                 border-radius: 50px;
                 cursor: pointer;
             }
-input[type=range].form_card_input_range::-ms-track {
-  background: transparent;
-  border-color: transparent;
-  border-width: 8.5px 0;
-  color: transparent;
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-}
-input[type=range].form_card_input_range::-ms-fill-lower {
-  background: #006ee6;
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-}
-input[type=range].form_card_input_range::-ms-fill-upper {
-  background: #007aff;
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-}
-input[type=range].form_card_input_range::-ms-thumb {
-  width: 20px;
-  height: 20px;
-  background: #007aff;
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
-}
-input[type=range].form_card_input_range:focus::-ms-fill-lower {
-  background: #007aff;
-}
-input[type=range].form_card_input_range:focus::-ms-fill-upper {
-  background: #1a87ff;
-}
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-@supports (-ms-ime-align:auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-  input[type=range].form_card_input_range {
-    margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
-  }
-}
+            input[type=range].form_card_input_range::-ms-track {
+            background: transparent;
+            border-color: transparent;
+            border-width: 8.5px 0;
+            color: transparent;
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            }
+            input[type=range].form_card_input_range::-ms-fill-lower {
+            background: #006ee6;
+            border: 0px solid rgba(0, 0, 0, 0);
+            border: 0;
+            }
+            input[type=range].form_card_input_range::-ms-fill-upper {
+            background: #007aff;
+            border: 0px solid rgba(0, 0, 0, 0);
+            border: 0;
+            }
+            input[type=range].form_card_input_range::-ms-thumb {
+            width: 20px;
+            height: 20px;
+            background: #007aff;
+            border: 0px solid rgba(0, 0, 0, 0);
+            border: 0;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 0px;
+            /*Needed to keep the Edge thumb centred*/
+            }
+            input[type=range].form_card_input_range:focus::-ms-fill-lower {
+            background: #007aff;
+            }
+            input[type=range].form_card_input_range:focus::-ms-fill-upper {
+            background: #1a87ff;
+            }
+            /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+            how to remove the virtical space around the range input in IE*/
+            @supports (-ms-ime-align:auto) {
+            /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+            input[type=range].form_card_input_range {
+                margin: 0;
+                /*Edge starts the margin from the thumb, not the track as other browsers do*/
+            }
+            }
 
         }
     }
@@ -186,7 +198,7 @@ how to remove the virtical space around the range input in IE*/
         bottom: 0px;
         background-color: #fff;
         box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
-        z-index: 1;
+        z-index: 11000;
         .form_buttonSubmit{
             width: 60%;
             height: 47px;
