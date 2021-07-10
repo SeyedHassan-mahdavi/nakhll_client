@@ -10,8 +10,8 @@ export const ApiRegister = () => {
          * @param {* url > api url String}
          * @param {* token > Authorization Boolean}
          */
-        apiRequest: (data, method, url, token) => token
-            ? instanceAxiosWithToken({ method, url, data })
-            : instanceAxiosWithOutToken({ method, url, data }),
+        apiRequest: (data, method, url, token ,params) => token
+            ? instanceAxiosWithToken({ method, url, data ,params })
+            : instanceAxiosWithOutToken({ method, url, data , params}),
     }
 }

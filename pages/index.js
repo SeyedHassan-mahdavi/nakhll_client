@@ -41,9 +41,10 @@ export default function Home() {
     // )
     // console.log(">>>>", _handleRequestApi);
     const _handleRequestApi = async () => {
+      let params = {"ali":"hosein","adklsjfkl":"sdfsf"}
       let loadData = null;
       let dataUrl = '/app/api/v1/get-user-info/';
-      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, true);
+      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, true , params);
       console.log("res uncom :", response);
       // setImages(response);//==> output: {}
     }

@@ -7,7 +7,6 @@ export const instanceAxiosWithOutToken = Axios.create({
     baseURL: "http://localhost:8000",
     headers: {
         'Content-Type': ' application/json',
-        // Cookie: `sessionid=zp97k14osurrp6r55vuc6j526j5119f4;path=/`
     },
     timeout: 18000,
 
@@ -24,7 +23,6 @@ export const instanceAxiosWithToken = Axios.create({
     timeout: 18000,
     headers: {
         'Content-Type': ' application/json',
-        // Cookie: `sessionid=zp97k14osurrp6r55vuc6j526j5119f4;path=/`
     },
 });
 
