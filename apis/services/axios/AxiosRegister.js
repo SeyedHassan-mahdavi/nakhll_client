@@ -3,17 +3,15 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 
 //=================================================================\\
 export const instanceAxiosWithOutToken = Axios.create({
+
     withCredentials: true,
 
-    baseURL: "http://nakhll.com",
+    baseURL: "http://localhost:8000",
     headers: {
-        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
-        // 'Access-Control-Allow-Credentials': 'true',
-        // 'Content-Type': ' application/json',
-        // 'Access-Control-Allow-Credentials': true
+        'Content-Type': ' application/json',
+        Cookie: `sessionid=7hq2lfr3rv036qcdn4b18kbn89129x95;path=/`
     },
     timeout: 18000,
-    // credentials: 'include'
 
 });
 
@@ -23,11 +21,11 @@ export const instanceAxiosWithOutToken = Axios.create({
 
 //=================================================================\\
 export const instanceAxiosWithToken = Axios.create({
-    baseURL: "http://nakhll.com",
+    baseURL: "http://localhost:8000",
     timeout: 18000,
     headers: {
-        // 'Access-Control-Allow-Origin': '*',
-        // 'Authorization': 'Bearer sdfasfd-asfd-12-23'
+        'Content-Type': ' application/json',
+        Cookie: `sessionid=7hq2lfr3rv036qcdn4b18kbn89129x95;path=/`
     },
 });
 

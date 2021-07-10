@@ -22,29 +22,32 @@ export default function Home() {
     //   process.env.ENV_LOCAL_VARIABLE
     const date = new Date();
     // date.setTime(date.getTime() + expire * 24 * 60 * 60 * 1000);
-    if (process.browser) {
-      document.cookie = `sessionid=yi1vr3kzutl2rg8w2rfl3spy641eqjmh;path=/`;
-      setTimeout(() => {
+    // if (process.browser) {
+    //   // document.cookie = `sessionid=yi1vr3kzutl2rg8w2rfl3spy641eqjmh;path=/`;
+    //   setTimeout(() => {
 
-        axios.get("http://localhost:8000/app/api/v1/get-user-info/", {
-          withCredentials: true,
-          headers: {
-            'Content-Type': 'application/json',
-            Cookie: `sessionid=yi1vr3kzutl2rg8w2rfl3spy641eqjmh;path=/`
-          }
-        });
-      }, 2000);
-    }
+    //     axios.get("http://localhost:8000/app/api/v1/get-user-info/", {
+    //       withCredentials: true,
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //         // 'Access-Control-Allow-Origin': '*',
+    //         Cookie: `sessionid=7hq2lfr3rv036qcdn4b18kbn89129x95;path=/`
+    //       }
+    //     });
+    //   }, 200);
+    // }
+
+
     // )
     // console.log(">>>>", _handleRequestApi);
-    // const _handleRequestApi = async () => {
-    //   let loadData = null;
-    //   let dataUrl = '/app/api/v1/get-user-info/';
-    //   let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
-    //   console.log("res uncom :", response);
-    //   // setImages(response);//==> output: {}
-    // }
-    // _handleRequestApi();
+    const _handleRequestApi = async () => {
+      let loadData = null;
+      let dataUrl = '/app/api/v1/get-user-info/';
+      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+      console.log("res uncom :", response);
+      // setImages(response);//==> output: {}
+    }
+    _handleRequestApi();
 
     //   // toastSuccessMessage('success');
 
