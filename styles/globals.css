@@ -15,19 +15,18 @@
 html {
   overflow-x: hidden;
 }
-html,
 body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #5e7488;
+  color: #05335e;
   font-size: 62.5%;
-
   padding: 0;
   word-spacing: -1px;
-  background: #e5e5e5;
+  background: #961515;
   direction: rtl;
   margin: 0;
   font-family: "IRANSansB" !important;
+  padding-bottom: 100px !important;
 }
 
 /* :root {

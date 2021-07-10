@@ -5,15 +5,15 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 export const instanceAxiosWithOutToken = Axios.create({
     withCredentials: true,
 
-    baseURL: "http://192.168.1.48:8000",
+    baseURL: "http://nakhll.com",
     headers: {
         // 'Access-Control-Allow-Origin': 'http://localhost:3000',
-        'Access-Control-Allow-Credentials': 'true',
-        'Content-Type': ' application/json',
+        // 'Access-Control-Allow-Credentials': 'true',
+        // 'Content-Type': ' application/json',
         // 'Access-Control-Allow-Credentials': true
     },
     timeout: 18000,
-    credentials: 'include'
+    // credentials: 'include'
 
 });
 
@@ -23,11 +23,11 @@ export const instanceAxiosWithOutToken = Axios.create({
 
 //=================================================================\\
 export const instanceAxiosWithToken = Axios.create({
-    baseURL: process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE,
+    baseURL: "http://nakhll.com",
     timeout: 18000,
     headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Authorization': 'Bearer sdfasfd-asfd-12-23'
+        // 'Access-Control-Allow-Origin': '*',
+        // 'Authorization': 'Bearer sdfasfd-asfd-12-23'
     },
 });
 

@@ -1,5 +1,6 @@
 // node libraries
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 // image
 import search from '../../public/assets/image/headerIcon/search.svg';
 import close from '../../public/assets/image/headerIcon/close.svg';
@@ -16,8 +17,11 @@ function MobileHeader({
     title,
     type
 }) {
+    const router = useRouter();
     return (
-        <div className={type === "back" ? `${styles.wrapper_header_back}` : `${styles.wrapper_header}`}>
+        <div className={type === "back" ? `${styles.wrapper_header_back}` : `${styles.wrapper_header}`}
+            onClick={() => router.back()}
+        >
             {type === "back" && <Image src={back} alt="header icon" />}
             <span className={styles.header_span}>{title}</span>
             {type === "search" && <Image src={search} alt="header icon" />}

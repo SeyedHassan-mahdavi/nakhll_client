@@ -3,6 +3,8 @@
     flex-direction: column;
     direction: rtl;
     font-family: 'vazir';
+    height: 100vh;
+    color: #000000;
     .header{
         display: flex;
         flex-direction: row;
@@ -22,22 +24,61 @@
         color: #5E7488;
         margin: 10px 15px;
     }
-    .card{
-        height: 62px;
-        background: #FFFFFF;
-        border: 1px solid #E0E6E9;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        font-weight: normal;
-        font-size: 13px;
+    .form_edit{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        color: #364254;
-        padding: 14px;
-        margin: 0px 15px;
-        margin-bottom: 10px;
+        flex-direction: column;
+        // items
+        .form_edit_card{
+            height: 62px;
+            background: #FFFFFF;
+            border: 1px solid #E0E6E9;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            color: #364254;
+            padding: 14px;
+            margin: 0px 15px;
+            margin-bottom: 10px;
+            // input
+            .form_edit_input{
+                width: 96px;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid #A4AEBB;
+                margin: 5px 0px;
+            }
+        }
+        // submit button
+        .form_edit_wrapper_button{
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 62px;
+            background: #FFFFFF;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+            z-index: 20000;
+            padding: 0px 10px;
+            .form_edit_button{
+                width: 100%;
+                height: 47px;
+                background: #007AFF;
+                border-radius: 2px;
+                text-align: center;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
     }
 }

@@ -13,15 +13,20 @@ const Price = () => {
                 <span>قیمت</span>
                 <span>قیمت با تخفیف</span>
             </div>
-            {[1, 2, 3].map((value, index) => {
-                return (
-                    <div key={index} className={styles.card}>
-                        <span>گل محمدی</span>
-                        <span>29000</span>
-                        <span>29000</span>
-                    </div>
-                )
-            })}
+            <form className={styles.form_edit}>
+                {[1, 2, 3].map((value, index) => {
+                    return (
+                        <div key={index} className={styles.form_edit_card}>
+                            <label>گل محمدی</label>
+                            <input className={styles.form_edit_input} type="number" name="price" id="" />
+                            <input className={styles.form_edit_input} type="number" name="price" id="" />
+                        </div>
+                    )
+                })}
+                <div className={styles.form_edit_wrapper_button}>
+                    <button type="submit" className={styles.form_edit_button}>اعمال تغییرات</button>
+                </div>
+            </form>
         </div>
     );
 }

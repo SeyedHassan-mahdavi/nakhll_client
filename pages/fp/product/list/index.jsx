@@ -119,18 +119,22 @@ const Card = () => {
                     </Head>
                     <MobileHeader title="لیست محصولات" type="search" />
                     <div className={styles.product_header}>
-                        <Image src={filter} alt="filter" />
                         <Link href={`/fp/product/list/filter`}>
-                            <a className={styles.product_header_link}>فیلتر</a>
+                            <a className={styles.product_header_link}>
+                                <Image src={filter} alt="filter" className={styles.product_header_link_icon} />
+                                فیلتر
+                            </a>
                         </Link>
-                        <Image src={sort} alt="sort" />
                         <span className={styles.product_header_link} onClick={() => {
                             setShowModalSort(showModal => !showModal);
-                        }}>ترتیب نمایش</span>
-                        <Image src={edit} alt="edit" />
+                        }}>
+                            <Image src={sort} alt="sort" className={styles.product_header_link_icon} />
+                            ترتیب نمایش</span>
                         <span className={styles.product_header_link} onClick={() => {
                             setShowModalEdit(showModal => !showModal);
-                        }}>ویرایش گروهی</span>
+                        }}>
+                            <Image src={edit} alt="edit" className={styles.product_header_link_icon} />
+                            ویرایش گروهی</span>
                     </div>
                     {data.map((value, index) => {
                         return (
@@ -175,6 +179,7 @@ const Card = () => {
                             </div>
                         )
                     })}
+                    <div style={{ marginTop: '200px' }}></div>
 
                 </div>
             }
