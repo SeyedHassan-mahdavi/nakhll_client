@@ -3,7 +3,7 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 
 //=================================================================\\
 export const instanceAxiosWithOutToken = Axios.create({
-    withCredentials: true,
+    // withCredentials: true,
     baseURL: "http://localhost:8000",
     headers: {
         'Content-Type': ' application/json',
