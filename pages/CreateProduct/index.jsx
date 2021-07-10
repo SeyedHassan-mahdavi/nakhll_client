@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import { Fragment, useEffect, useState } from "react";
-
-import styles from "../../public/assets/scss/style.module.scss"
+import MyLayout from '../../component/layout/Layout';
+import styles from "../../public/assets/scss/style.module.scss";
 
 // import { CustomFormikFormInput, CustomInfoTooltip ,CustomFormikForm , CustomFormikButton , CustomSwitchButton ,ErrorMessage } from '../../component/index';
 
@@ -125,7 +125,7 @@ const CreateProduct = () => {
                 validationSchema={validationSchema}
               >
                 <Fragment>
-                  <div style={{background:"red" , width:"300px" , height:"300px"}}></div>
+                  <div style={{ background: "red", width: "300px", height: "300px" }}></div>
                   <div>
                     <div>
                       <h5 className="mb-0 d-inline mr-2">عکس و ویدیو محصول*</h5>
@@ -256,3 +256,4 @@ const CreateProduct = () => {
 };
 
 export default CreateProduct;
+CreateProduct.Layout = MyLayout;

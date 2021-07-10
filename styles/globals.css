@@ -435,6 +435,7 @@ html {
 body {
   background: var(--background1);
   font-family: "IRANSansB" !important;
+  direction: rtl !important;
 }
 
 /* font-size */
