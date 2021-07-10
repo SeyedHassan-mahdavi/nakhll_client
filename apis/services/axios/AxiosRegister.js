@@ -3,13 +3,11 @@ import { toastErrorMessage, toastSuccessMessage } from '../../../utils/toastMess
 
 //=================================================================\\
 export const instanceAxiosWithOutToken = Axios.create({
-
     withCredentials: true,
-
     baseURL: "http://localhost:8000",
     headers: {
         'Content-Type': ' application/json',
-        Cookie: `sessionid=7hq2lfr3rv036qcdn4b18kbn89129x95;path=/`
+        // Cookie: `sessionid=zp97k14osurrp6r55vuc6j526j5119f4;path=/`
     },
     timeout: 18000,
 
@@ -21,11 +19,12 @@ export const instanceAxiosWithOutToken = Axios.create({
 
 //=================================================================\\
 export const instanceAxiosWithToken = Axios.create({
+    withCredentials: true,
     baseURL: "http://localhost:8000",
     timeout: 18000,
     headers: {
         'Content-Type': ' application/json',
-        Cookie: `sessionid=7hq2lfr3rv036qcdn4b18kbn89129x95;path=/`
+        // Cookie: `sessionid=zp97k14osurrp6r55vuc6j526j5119f4;path=/`
     },
 });
 

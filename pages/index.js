@@ -43,7 +43,7 @@ export default function Home() {
     const _handleRequestApi = async () => {
       let loadData = null;
       let dataUrl = '/app/api/v1/get-user-info/';
-      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, false);
+      let response = await ApiRegister().apiRequest(loadData, 'get', dataUrl, true);
       console.log("res uncom :", response);
       // setImages(response);//==> output: {}
     }
