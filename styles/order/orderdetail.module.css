@@ -1,0 +1,128 @@
+.btn {
+    border: none;
+    background: none;
+    outline: 0;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.wrapper {
+    direction: rtl;
+    grid-column: 1/-1;
+    text-align: right;
+    margin: 16px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
+}
+
+.wrapper>* {
+    background: #ffffff;
+    border: 1px solid #e0e6e9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.header {
+    padding: 15px;
+}
+
+.content>* {
+    margin-right: 14px;
+}
+
+.content:last-child {
+    margin-bottom: 30px;
+}
+
+.post_information_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.post_information_h3 {
+    margin-top: 9px;
+}
+
+.post_details_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.post_details_content>*:last-child {
+    margin-left: 15px;
+    color: #364254;
+}
+
+
+/* کالاهای خریدار ی شده */
+
+.purchased_good_content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.purchased_good_one {
+    display: flex;
+}
+
+.purchased_good_two {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.good_three_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.good_three_content>*:last-child {
+    color: #364254;
+}
+
+.good_three_content_sub {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin: 30px 15px;
+    color: #364254;
+}
+
+.purchased_good_three {
+    border-top: 1px dashed #e0e6e9;
+}
+
+.good_four {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* فاکتور نهایی */
+
+.final_invoice_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.final_invoice_content>*:last-child {
+    margin-left: 15px;
+    color: #364254;
+}
+
+.final_invoice_content_sub {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin: 30px 15px;
+    color: #364254;
+}
