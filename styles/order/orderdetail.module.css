@@ -8,6 +8,34 @@
     outline: 0;
 }
 
+.btnSubmit {
+    background-color: #007aff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 15px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.btnProblem {
+    background-color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    color: #007aff;
+    margin-right: 15px;
+    border: 1px solid #007aff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 40px;
+}
+
 .wrapper {
     direction: rtl;
     grid-column: 1/-1;
@@ -38,6 +66,89 @@
     margin-bottom: 30px;
 }
 
+
+/* وضعیت  سفارش */
+
+.title_status_pat {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.title_status {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    background: rgba(8, 147, 25, 0.15);
+    border-radius: 8px;
+    color: #089319;
+    padding: 10px;
+}
+
+.place_icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #E0E6E9;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place_icon_two {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #ffb020;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place_icon_three {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #00D69A;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order_status_all {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.order_status_oneLevel {
+    display: flex;
+}
+
+.order_status_right_icon {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order_status_button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 25px;
+    margin-left: 14px;
+}
+
+.btn_code {
+    background: #ffffff;
+    border: 1px solid #e0e6e9;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 .post_information_content {
     display: flex;
     flex-direction: column;
@@ -57,6 +168,14 @@
 .post_details_content>*:last-child {
     margin-left: 15px;
     color: #364254;
+}
+
+.order_status_code {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: 30px;
+    height: 40px;
+    margin-left: 15px;
 }
 
 
