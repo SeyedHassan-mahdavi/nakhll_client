@@ -124,9 +124,18 @@
         margin-top: 32px;
         &_header {
             display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e6e9;
+            .Vline {
+                height: 20px;
+                border-left: 2px solid #e0e6e9;
+                margin-right: 11px;
+                margin-left: 11px;
+            }
             .right {
                 display: flex;
                 margin: 15px 24px;
+                border-left: 2px solid #e0e6e9;
                 h1 {
                     align-self: center;
                     margin-left: 30px;
@@ -156,9 +165,18 @@
                 }
             }
             .left {
+                margin-left: 20px;
                 display: flex;
+                align-items: center;
                 div {
                     display: flex;
+                    align-items: center;
+                    h2 {
+                        margin: 0 5px;
+                    }
+                }
+                h2 {
+                    margin: 0 5px;
                 }
             }
         }

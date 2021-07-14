@@ -20,6 +20,9 @@ import sort from "../../../../public/assets/image/productHeaderLink/sort.svg";
 // styles
 import styles from "../../../../styles/product/card.module.scss";
 
+// Table 
+import BootstrapTable from 'react-bootstrap-table-next';
+
 const Card = () => {
   let [showModalSort, setShowModalSort] = useState(false);
   let [showModalEdit, setShowModalEdit] = useState(false);
@@ -223,6 +226,7 @@ const Card = () => {
                     <h2>تعداد نتایج : </h2>
                     <h2>1 عدد</h2>
                   </div>
+                  <div className={styles.Vline}></div>
                   <div>
                     <h2>تعداد نمایش :</h2>
                     <select name="cars" id="cars">
