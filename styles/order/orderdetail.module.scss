@@ -2,9 +2,10 @@
     border: none;
     background: none;
     outline: 0;
-     :focus {
-        outline: 0;
-    }
+}
+
+.btn:focus {
+    outline: 0;
 }
 
 .btnSubmit {
@@ -272,57 +273,73 @@
 
 .order_status_allD {
     display: flex;
-    margin-right:24px;
-    
+    margin-right: 24px;
 }
-
 
 .order_statusD_button {
     display: flex;
-    flex-direction:column;
-    button{
-        width:135px;
-        height:35px;
-        margin:8px 18px;
-        
-
+    flex-direction: column;
+    button {
+        width: 135px;
+        height: 35px;
+        margin: 8px 18px;
     }
 }
 
-.contentinfD{
-    display:grid;
+.contentinfD {
+    display: grid;
     grid-template-columns: 50fr 25fr 25fr;
     grid-template-rows: 2fr;
-    margin-right:25px;
-    margin-bottom:25px;
-    row-gap:25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    row-gap: 25px;
 }
 
-.post_informationD{
-    
-
-    &_content{
+.post_informationD {
+    &_content {
         display: flex;
         flex-direction: column;
         margin-top: 15px;
     }
 }
 
-
-.contentpostD{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:repeat(2,1fr);
-    gap:10px;
-    margin:25px;
-
-    div{
-        margin-left:30px
+.contentpostD {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: 25px;
+    div {
+        margin-left: 30px;
     }
 }
 
+.order_statusD_code {
+    display: grid;
+    grid-template-rows: 1fr;
+    // margin-top: 30px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
 
+.ButtonsGridD {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin-right: 15px;
+}
 
+.order_statusDcod_button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 14px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
 
-
-
+.HeaderTableD {
+    background-color: slateblue;
+    height: 50px;
+}
