@@ -6,10 +6,65 @@ import MyLayout from "../../../../component/layout/Layout";
 // import styles from "../../../../styles/order/orderdetail.module.css";
 import styles from "../../../../styles/order/orderdetail.module.scss";
 
+// import Table Bootstrap
+import BootstrapTable from "react-bootstrap-table-next";
+import paginationFactory from "react-bootstrap-table2-paginator";
+
 function HomePage() {
+  const columns = [
+    {
+      dataField: "id",
+      text: "ردیف",
+    },
+    {
+      dataField: "name",
+      text: "نام محصول",
+    },
+    {
+      dataField: "namesefaresh",
+      text: "تعداد سفارش",
+    },
+    {
+      dataField: "price",
+      text: "قیمت",
+    },
+    {
+      dataField: "pricei",
+      text: "",
+    },
+  ];
+  function conactorData() {}
+
+  // const datai = [
+  //   { id: 1, name: "milad", namesefaresh: 500, price: 250000, pricei: "" },
+  // ];
+  const expandRow = {
+    renderer: (row) => (
+      <div>
+        <p>{`This Expand row is belong to rowKey ${row.id}`}</p>
+        <p>
+          You can render anything here, also you can add additional data on
+          every row object
+        </p>
+        <p>
+          expandRow.renderer callback will pass the origin row object to you
+        </p>
+      </div>
+    ),
+  };
+  const [datai, setdatai] = useState({
+    id: "",
+    name: "",
+    namesefaresh: "",
+    price: "",
+    pricei: "",
+  });
+  const [idDiv, setIdDiv] = useState(0);
+
   const [data, setdata] = useState({});
   const [isShow, setisShow] = useState(false);
   const [btnOk, setbtnOk] = useState(true);
+
   useEffect(() => {
     const _handleRequestApi = async () => {
       let params = { factor_id: "67a7f662-efe8-4634-ae5f-9b60eff8ce97" };
@@ -27,11 +82,16 @@ function HomePage() {
       setdata(response);
       setisShow(true);
       // setData(response); //==> output: {}
+
+      console.log("data :>> ", response);
     };
     _handleRequestApi();
+
+    console.log("XXXX ", datai);
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       {isShow && (
@@ -272,42 +332,99 @@ function HomePage() {
               </div>
 
               {/* کالاهای خریداری شده */}
-
+              {/* TODO here work */}
+              {/* <div style={{ fontSize: "20px" }}>
+                <BootstrapTable
+                  keyField="id"
+                  data={datai}
+                  columns={columns}
+                  pagination={paginationFactory()}
+                />
+              </div> */}
               <div className={styles.purchased_good}>
                 <h1 className={styles.header}>کالاهای خریداری شده</h1>
                 <hr />
-                {data.factor_post.map((e) => {
+                {data.factor_post.map((e, index) => {
                   return (
-                    <div className={styles.purchased_good_content}>
-                      <div className={styles.purchased_good_one}>
-                        <Image
-                          src={`${e.product.image_thumbnail_url}`}
-                          width={45}
-                          height={45}
-                        />
-                        <h3 style={{ marginRight: "15px" }}>
-                          {e.product.title}
-                        </h3>
-                      </div>
-                      <div
-                        className={styles.purchased_good_two}
-                        style={{ marginTop: "16px" }}
-                      >
-                        <div style={{ display: "flex" }}>
-                          <h4>قیمت :</h4>
+                    <>
+                      <div className={styles.purchased_good_contentD}>
+                        <h3>{index + 1}</h3>
+                        <div
+                          style={{
+                            backgroundColor: "gold",
+                            width: "50px",
+                            height: "50px",
+                          }}
+                        ></div>
+                        <div className={styles.row}>
+                          <h3 style={{ marginRight: "15px" }}>
+                            {e.product.title}
+                          </h3>
+                        </div>
+
+                        <div style={{ width: "40px" }}>
+                          <h4 style={{ color: "#364254" }}>
+                            {e.ProductCount} <span>عدد</span>
+                          </h4>
+                        </div>
+                        <div style={{ width: "94px", display: "flex" }}>
                           <h4 style={{ color: "#364254" }}>
                             {e.product.price}{" "}
                             <span style={{ color: "#5E7488" }}>تومان</span>
                           </h4>
                         </div>
-                        <div>
-                          <h4 style={{ color: "#364254" }}>
-                            {e.ProductCount} <span>عدد</span>
-                          </h4>
+
+                        <div className={styles.good_four}>
+                          <button
+                            className={styles.btn}
+                            onClick={() => setIsOpen(!isOpen)}
+                          >
+                            {isOpen ? (
+                              <>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <h3>جزییات کمتر</h3>
+                                  <span
+                                    style={{
+                                      fontSize: "16px",
+                                      marginRight: "10px",
+                                    }}
+                                    className="fas fa-chevron-up"
+                                  ></span>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <h3>جزییات بیشتر</h3>
+                                  <span
+                                    style={{
+                                      fontSize: "16px",
+                                      marginRight: "10px",
+                                    }}
+                                    className="fas fa-chevron-down"
+                                  ></span>
+                                </div>
+                              </>
+                            )}
+                          </button>
                         </div>
                       </div>
+                      <div className={styles.lineTable}></div>
                       {isOpen && (
-                        <div className={styles.purchased_good_three}>
+                        <div
+                          id={index + 1}
+                          className={styles.purchased_good_threeD}
+                        >
                           <div className={styles.good_three_content}>
                             <h4>مجموع هزینه محصول</h4>
                             <h4
@@ -318,12 +435,12 @@ function HomePage() {
                             </h4>
                           </div>
                           {/* <div className={styles.good_three_content}>
-                        <h4> هزینه ارسال</h4>
-                        <h4 style={{ color: "#089319", fontWeight: "bold" }}>
-                          12.000+{" "}
-                          <span style={{ color: "#5E7488" }}>تومان</span>
-                        </h4>
-                      </div> */}
+                      <h4> هزینه ارسال</h4>
+                      <h4 style={{ color: "#089319", fontWeight: "bold" }}>
+                        12.000+{" "}
+                        <span style={{ color: "#5E7488" }}>تومان</span>
+                      </h4>
+                    </div> */}
                           <div
                             className={styles.good_three_content}
                             style={{ marginBottom: "30px" }}
@@ -337,81 +454,37 @@ function HomePage() {
                             </h4>
                           </div>
                           {/* <div
-                        className={styles.good_three_content}
-                        style={{ marginBottom: "30px" }}
-                      >
-                        <h4>تخفیف ارسال</h4>
-                        <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
-                          200,000-{" "}
-                          <span style={{ color: "#5E7488" }}>تومان</span>
-                        </h4>
-                      </div> */}
+                      className={styles.good_three_content}
+                      style={{ marginBottom: "30px" }}
+                    >
+                      <h4>تخفیف ارسال</h4>
+                      <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
+                        200,000-{" "}
+                        <span style={{ color: "#5E7488" }}>تومان</span>
+                      </h4>
+                    </div> */}
                           {/* <div
-                        className={styles.good_three_content}
-                        style={{ marginBottom: "30px" }}
-                      >
-                        <h4>استرداد</h4>
-                        <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
-                          0- <span style={{ color: "#5E7488" }}>تومان</span>
-                        </h4>
-                      </div> */}
+                      className={styles.good_three_content}
+                      style={{ marginBottom: "30px" }}
+                    >
+                      <h4>استرداد</h4>
+                      <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
+                        0- <span style={{ color: "#5E7488" }}>تومان</span>
+                      </h4>
+                    </div> */}
                           {/* <div
-                        className={styles.good_three_content}
-                        style={{ marginBottom: "30px" }}
-                      >
-                        <h4>کارمزد</h4>
-                        <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
-                          370,656-{" "}
-                          <span style={{ color: "#5E7488" }}>تومان</span>
-                        </h4>
-                      </div> */}
+                      className={styles.good_three_content}
+                      style={{ marginBottom: "30px" }}
+                    >
+                      <h4>کارمزد</h4>
+                      <h4 style={{ color: "#D14343", fontWeight: "bold" }}>
+                        370,656-{" "}
+                        <span style={{ color: "#5E7488" }}>تومان</span>
+                      </h4>
+                    </div> */}
                         </div>
                       )}
-                      <div className={styles.good_four}>
-                        <button
-                          className={styles.btn}
-                          onClick={() => setIsOpen(!isOpen)}
-                        >
-                          {isOpen ? (
-                            <>
-                              <div
-                                style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <h3>جزییات کمتر</h3>
-                                <span
-                                  style={{
-                                    fontSize: "16px",
-                                    marginRight: "10px",
-                                  }}
-                                  className="fas fa-chevron-up"
-                                ></span>
-                              </div>
-                            </>
-                          ) : (
-                            <>
-                              <div
-                                style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <h3>جزییات بیشتر</h3>
-                                <span
-                                  style={{
-                                    fontSize: "16px",
-                                    marginRight: "10px",
-                                  }}
-                                  className="fas fa-chevron-down"
-                                ></span>
-                              </div>
-                            </>
-                          )}
-                        </button>
-                      </div>
-                    </div>
+                    </>
                   );
                 })}
               </div>
